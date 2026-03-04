@@ -1,0 +1,25 @@
+# KiCad backup files
+*.bak
+*.bak2
+*-backups/
+
+# KiCad lock files
+*.lck
+
+# KiCad local settings (user-specific)
+*.kicad_prl
+
+# KiCad cache files
+fp-info-cache
+
+# Gerber output (regenerate from source)
+*-Gerbers-*.zip
+
+# Python
+__pycache__/
+*.pyc
+
+# OS files
+Thumbs.db
+Desktop.ini
+.DS_Store
