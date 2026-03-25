@@ -1468,7 +1468,7 @@
 	)
 	(text "Charge Pump Capacitors"
 		(exclude_from_sim no)
-		(at 69.342 86.614 0)
+		(at 61.976 86.868 0)
 		(effects
 			(font
 				(size 1.524 1.524)
@@ -1487,10 +1487,16 @@
 		(uuid "a0000001-0001-0001-0001-000000000005")
 	)
 	(junction
-		(at 71.12 63.5)
+		(at 97.79 109.22)
 		(diameter 0)
 		(color 0 0 0 0)
-		(uuid "bade3681-169f-475d-a126-e3d63aa712ae")
+		(uuid "076b2b76-ed62-4605-a271-63ee83a7cd5f")
+	)
+	(junction
+		(at 97.79 121.92)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "6691b2c0-f62c-49dd-bd11-75715cf19b6a")
 	)
 	(wire
 		(pts
@@ -1514,7 +1520,7 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 66.04) (xy 78.74 78.74)
+			(xy 78.74 66.04) (xy 78.74 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1531,6 +1537,16 @@
 			(type default)
 		)
 		(uuid "2f4ca9dc-89b2-4133-b9f1-c9b8f47b08d2")
+	)
+	(wire
+		(pts
+			(xy 97.79 109.22) (xy 97.79 111.76)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "3bcd2f22-bba4-4661-a9a0-7bc76a2da127")
 	)
 	(wire
 		(pts
@@ -1554,13 +1570,23 @@
 	)
 	(wire
 		(pts
-			(xy 78.74 78.74) (xy 71.12 78.74)
+			(xy 85.09 83.82) (xy 85.09 90.17)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "609ba01e-1e33-42ae-9379-57d4f73ac3c2")
+		(uuid "61cd4017-580e-4554-8f2a-a203fe3e40d0")
+	)
+	(wire
+		(pts
+			(xy 87.63 111.76) (xy 87.63 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "63ba93d9-22f8-4930-a456-50cd63603607")
 	)
 	(wire
 		(pts
@@ -1581,6 +1607,16 @@
 			(type default)
 		)
 		(uuid "6f622b0e-7d11-4f61-9714-2d01451f4253")
+	)
+	(wire
+		(pts
+			(xy 85.09 73.66) (xy 85.09 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "721d6e56-bfce-4fd0-92fb-cc58c4e3f2d0")
 	)
 	(wire
 		(pts
@@ -1644,6 +1680,16 @@
 	)
 	(wire
 		(pts
+			(xy 67.31 76.2) (xy 78.74 76.2)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b056e277-6b7a-4b94-987b-9e548daf4604")
+	)
+	(wire
+		(pts
 			(xy 55.88 55.88) (xy 55.88 58.42)
 		)
 		(stroke
@@ -1651,6 +1697,16 @@
 			(type default)
 		)
 		(uuid "b0ba7fec-bfaf-46a9-93a8-19d2972fefc1")
+	)
+	(wire
+		(pts
+			(xy 87.63 121.92) (xy 97.79 121.92)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b1ce1495-378c-455c-8460-34c9b69be062")
 	)
 	(wire
 		(pts
@@ -1684,27 +1740,7 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 63.5) (xy 71.12 67.31)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0000004-0001-0001-0001-000000000001")
-	)
-	(wire
-		(pts
-			(xy 71.12 74.93) (xy 71.12 78.74)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "c0000004-0001-0001-0001-000000000002")
-	)
-	(wire
-		(pts
-			(xy 62.23 74.93) (xy 62.23 78.74)
+			(xy 67.31 73.66) (xy 67.31 76.2)
 		)
 		(stroke
 			(width 0)
@@ -1714,7 +1750,7 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 107.95) (xy 97.79 111.76)
+			(xy 97.79 107.95) (xy 97.79 109.22)
 		)
 		(stroke
 			(width 0)
@@ -1724,7 +1760,7 @@
 	)
 	(wire
 		(pts
-			(xy 97.79 119.38) (xy 97.79 123.19)
+			(xy 97.79 119.38) (xy 97.79 121.92)
 		)
 		(stroke
 			(width 0)
@@ -1744,7 +1780,7 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 67.31) (xy 62.23 63.5)
+			(xy 67.31 66.04) (xy 67.31 63.5)
 		)
 		(stroke
 			(width 0)
@@ -1764,13 +1800,23 @@
 	)
 	(wire
 		(pts
-			(xy 71.12 63.5) (xy 96.52 63.5)
+			(xy 67.31 63.5) (xy 96.52 63.5)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "cfb5c72b-56a6-4e5b-976f-cb6d6058a01e")
+	)
+	(wire
+		(pts
+			(xy 97.79 121.92) (xy 97.79 123.19)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d0218b81-3dd7-4b89-9e3e-17c5c30a79e4")
 	)
 	(wire
 		(pts
@@ -1791,6 +1837,16 @@
 			(type default)
 		)
 		(uuid "de0b5ade-19b1-4eda-a348-65f8422450b1")
+	)
+	(wire
+		(pts
+			(xy 87.63 109.22) (xy 97.79 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e09b40dc-8919-4bc8-9965-4a2f1152a071")
 	)
 	(wire
 		(pts
@@ -1824,13 +1880,13 @@
 	)
 	(wire
 		(pts
-			(xy 62.23 63.5) (xy 71.12 63.5)
+			(xy 87.63 119.38) (xy 87.63 121.92)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "fb0adec9-e826-4731-8ebc-d06d3434be73")
+		(uuid "fad5e60e-78e9-47ed-a353-b236d676f820")
 	)
 	(label "XV0"
 		(at 85.09 66.04 0)
@@ -2145,6 +2201,75 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 85.09 80.01 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "05b5dab8-e83a-4e23-898b-2e4ba185b95e")
+		(property "Reference" "C4"
+			(at 87.63 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1uF"
+			(at 87.63 82.55 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 86.0552 83.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 85.09 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Charge pump capacitor V0-GND"
+			(at 85.09 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "5635fda1-fd72-4d13-b33f-0ac973c512be")
+		)
+		(pin "2"
+			(uuid "6ad9626c-0418-4081-8345-2072359a793c")
+		)
+		(instances
+			(project "COGDisplayBreakout"
+				(path "/5d6668f5-9efd-4633-a357-e3746984ef57"
+					(reference "C4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector_Generic:Conn_01x01")
 		(at 132.08 59.69 0)
 		(unit 1)
@@ -2206,6 +2331,71 @@
 			(project ""
 				(path "/5d6668f5-9efd-4633-a357-e3746984ef57"
 					(reference "J4")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 85.09 90.17 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1135a37a-ef6f-4031-a5c7-18765b86f1d6")
+		(property "Reference" "#PWR01"
+			(at 85.09 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 85.09 93.98 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 85.09 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 85.09 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 85.09 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "751989a0-2350-4a79-bfb9-c769ebb49d6c")
+		)
+		(instances
+			(project "COGDisplayBreakout"
+				(path "/5d6668f5-9efd-4633-a357-e3746984ef57"
+					(reference "#PWR01")
 					(unit 1)
 				)
 			)
@@ -2495,7 +2685,7 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 71.12 71.12 0)
+		(at 87.63 115.57 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -2503,7 +2693,7 @@
 		(dnp no)
 		(uuid "d0000001-0001-0001-0001-000000000004")
 		(property "Reference" "C1"
-			(at 73.66 71.12 0)
+			(at 90.17 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2511,8 +2701,8 @@
 				(justify left)
 			)
 		)
-		(property "Value" "1uF"
-			(at 73.66 73.66 0)
+		(property "Value" "10uF"
+			(at 90.17 118.11 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2521,7 +2711,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 72.0852 74.93 0)
+			(at 88.5952 119.38 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2530,7 +2720,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 71.12 71.12 0)
+			(at 87.63 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2539,7 +2729,7 @@
 			)
 		)
 		(property "Description" "Charge pump capacitor V0-XV0"
-			(at 71.12 71.12 0)
+			(at 87.63 115.57 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2564,15 +2754,15 @@
 	)
 	(symbol
 		(lib_id "Device:C")
-		(at 62.23 71.12 0)
+		(at 67.31 69.85 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(uuid "d0000001-0001-0001-0001-000000000005")
-		(property "Reference" "C2"
-			(at 64.77 71.12 0)
+		(property "Reference" "C3"
+			(at 61.214 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2581,7 +2771,7 @@
 			)
 		)
 		(property "Value" "1uF"
-			(at 64.77 73.66 0)
+			(at 60.706 72.136 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2590,7 +2780,7 @@
 			)
 		)
 		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
-			(at 63.1952 74.93 0)
+			(at 68.2752 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2599,7 +2789,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 62.23 71.12 0)
+			(at 67.31 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2608,7 +2798,7 @@
 			)
 		)
 		(property "Description" "Charge pump capacitor V0-GND"
-			(at 62.23 71.12 0)
+			(at 67.31 69.85 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2625,7 +2815,7 @@
 		(instances
 			(project "COGDisplayBreakout"
 				(path "/5d6668f5-9efd-4633-a357-e3746984ef57"
-					(reference "C2")
+					(reference "C3")
 					(unit 1)
 				)
 			)
@@ -2640,7 +2830,7 @@
 		(on_board yes)
 		(dnp no)
 		(uuid "d0000001-0001-0001-0001-000000000006")
-		(property "Reference" "C3"
+		(property "Reference" "C2"
 			(at 100.33 115.57 0)
 			(effects
 				(font
@@ -2694,7 +2884,7 @@
 		(instances
 			(project "COGDisplayBreakout"
 				(path "/5d6668f5-9efd-4633-a357-e3746984ef57"
-					(reference "C3")
+					(reference "C2")
 					(unit 1)
 				)
 			)
@@ -2717,7 +2907,7 @@
 				)
 			)
 		)
-		(property "Value" "15R"
+		(property "Value" "20R"
 			(at 118.11 55.88 90)
 			(effects
 				(font
@@ -2827,71 +3017,6 @@
 			(project "COGDisplayBreakout"
 				(path "/5d6668f5-9efd-4633-a357-e3746984ef57"
 					(reference "#PWR03")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 62.23 78.74 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "d0000002-0001-0001-0001-000000000007")
-		(property "Reference" "#PWR07"
-			(at 62.23 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 62.23 82.55 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 62.23 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 62.23 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 62.23 78.74 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d2000007-0001-0001-0001-000000000001")
-		)
-		(instances
-			(project "COGDisplayBreakout"
-				(path "/5d6668f5-9efd-4633-a357-e3746984ef57"
-					(reference "#PWR07")
 					(unit 1)
 				)
 			)
