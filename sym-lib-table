@@ -1,0 +1,4 @@
+(sym_lib_table
+  (version 7)
+  (lib (name "COGDisplayBreakout")(type "KiCad")(uri "${KIPRJMOD}/COGDisplayBreakout.kicad_sym")(options "")(descr "Project-specific symbols for COG Display Breakout"))
+)
