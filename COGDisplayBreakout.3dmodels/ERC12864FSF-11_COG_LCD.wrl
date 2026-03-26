@@ -3,37 +3,86 @@
 # 27.30 x 21.50 x 3.30mm (landscape)
 # Units: 1 VRML unit = 2.54mm (KiCad convention)
 # Origin at footprint center, Z=0 at PCB surface
+# Glass bottom sits at Z=0, COG/FPC underneath (negative Z)
 
 # Scale factors: divide mm by 2.54 to get VRML units
 # 27.30mm = 10.748, half = 5.374
 # 21.50mm = 8.465, half = 4.232
-# Glass thickness 1.1mm = 0.433
+# Case thickness 3.2mm = 1.260
+# Glass protrusion 0.1mm = 0.039 above case
 # Total height 3.3mm = 1.299
 
-# Glass body (main transparent/grey body)
+# Case body - split into 3 pieces for FPC exit notch
+# Full case: 27.3 x 21.5mm, with 18.3mm gap at bottom center
+# Gap: 18.3mm = 7.205 VRML, each side stub: 4.5mm = 1.772 VRML
+# Notch depth: 1.2mm = 0.472 VRML (to FPC retention slot)
+
+# Main upper section: 27.3mm wide x 20.3mm tall
+# VRML Y center = 0.236 (shifted up from case center)
 Transform {
-  translation 0 0 0.650
+  translation 0 0.236 0.630
   children [
     Shape {
       appearance Appearance {
         material Material {
           diffuseColor 0.75 0.78 0.75
-          transparency 0.15
+          transparency 0.0
           specularColor 0.9 0.9 0.9
           shininess 0.8
         }
       }
       geometry Box {
-        size 10.748 8.465 0.433
+        size 10.748 7.992 1.260
       }
     }
   ]
 }
 
-# LCD area (dark grey/green, slightly raised)
-# LCD area: 25.40 x 19.80mm = 10.000 x 7.795 VRML
+# Bottom-left corner block: 4.5mm wide x 1.2mm tall
 Transform {
-  translation 0 0 0.875
+  translation -4.488 -3.996 0.630
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.75 0.78 0.75
+          transparency 0.0
+          specularColor 0.9 0.9 0.9
+          shininess 0.8
+        }
+      }
+      geometry Box {
+        size 1.772 0.472 1.260
+      }
+    }
+  ]
+}
+
+# Bottom-right corner block: 4.5mm wide x 1.2mm tall
+Transform {
+  translation 4.488 -3.996 0.630
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.75 0.78 0.75
+          transparency 0.0
+          specularColor 0.9 0.9 0.9
+          shininess 0.8
+        }
+      }
+      geometry Box {
+        size 1.772 0.472 1.260
+      }
+    }
+  ]
+}
+
+# LCD area (dark grey/green, on top of case + glass protrusion)
+# LCD area: 25.40 x 19.80mm = 10.000 x 7.795 VRML
+# Glass top at Z=1.299 (case 1.260 + protrusion 0.039)
+Transform {
+  translation 0 0 1.299
   children [
     Shape {
       appearance Appearance {
@@ -52,8 +101,10 @@ Transform {
 
 # Viewing area (lighter LCD surface)
 # V/A: 23.40 x 14.00mm = 9.213 x 5.512 VRML
+# Shifted up so top edge is 1mm below LCD area top edge
+# LCD top Y = -3.898, V/A top Y = -3.898 + 0.394 = -3.504, center Y = -3.504 + 2.756 = -0.748
 Transform {
-  translation 0 0 0.890
+  translation 0 0.748 1.309
   children [
     Shape {
       appearance Appearance {
@@ -72,8 +123,9 @@ Transform {
 
 # Active area (slightly greenish tint)
 # A/A: 21.74 x 11.50mm = 8.559 x 4.528 VRML
+# Centered within viewing area
 Transform {
-  translation 0 0 0.900
+  translation 0 0.748 1.319
   children [
     Shape {
       appearance Appearance {
@@ -90,11 +142,12 @@ Transform {
   ]
 }
 
-# Controller chip on glass (COG - small dark rectangle on bottom area)
+# Controller chip on glass (COG - on underside of glass)
 # Approximate: 8mm x 2mm x 0.5mm, positioned near bottom edge
 # 8mm = 3.150, 2mm = 0.787, 0.5mm = 0.197
+# Bottom of glass is Z=0, chip hangs below: center at Z=-0.099
 Transform {
-  translation 0 -3.400 0.335
+  translation 0 -3.400 -0.099
   children [
     Shape {
       appearance Appearance {
@@ -111,11 +164,15 @@ Transform {
   ]
 }
 
-# FPC tail (thin flexible circuit extending from bottom)
-# ~8mm wide, extends ~2mm below glass, very thin
-# 8mm = 3.150, 2mm = 0.787, 0.1mm = 0.039
+# FPC cable (thin flexible circuit extending from bottom of LCD area)
+# 12-pin, 0.5mm pitch, ~6mm wide = 2.362 VRML
+# Starts at bottom of 19.8mm LCD rect (footprint Y=9.9, VRML Y=-3.898)
+# Extends to FPC connector area (footprint Y=11.95, VRML Y=-4.705)
+# Length: 2.05mm = 0.807 VRML
+# Center Y: -4.301 VRML
+# Thickness: 0.1mm = 0.039 VRML, on underside of glass near Z=0
 Transform {
-  translation 0 -4.625 0.433
+  translation 0 -4.164 1.181
   children [
     Shape {
       appearance Appearance {
@@ -126,7 +183,7 @@ Transform {
         }
       }
       geometry Box {
-        size 3.150 0.787 0.039
+        size 2.362 0.807 0.039
       }
     }
   ]
