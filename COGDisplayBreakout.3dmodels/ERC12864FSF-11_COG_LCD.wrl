@@ -1,0 +1,133 @@
+#VRML V2.0 utf8
+# ERC12864FSF-11 COG LCD Display Module
+# 27.30 x 21.50 x 3.30mm (landscape)
+# Units: 1 VRML unit = 2.54mm (KiCad convention)
+# Origin at footprint center, Z=0 at PCB surface
+
+# Scale factors: divide mm by 2.54 to get VRML units
+# 27.30mm = 10.748, half = 5.374
+# 21.50mm = 8.465, half = 4.232
+# Glass thickness 1.1mm = 0.433
+# Total height 3.3mm = 1.299
+
+# Glass body (main transparent/grey body)
+Transform {
+  translation 0 0 0.650
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.75 0.78 0.75
+          transparency 0.15
+          specularColor 0.9 0.9 0.9
+          shininess 0.8
+        }
+      }
+      geometry Box {
+        size 10.748 8.465 0.433
+      }
+    }
+  ]
+}
+
+# LCD area (dark grey/green, slightly raised)
+# LCD area: 25.40 x 19.80mm = 10.000 x 7.795 VRML
+Transform {
+  translation 0 0 0.875
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.2 0.25 0.2
+          specularColor 0.3 0.3 0.3
+          shininess 0.5
+        }
+      }
+      geometry Box {
+        size 10.000 7.795 0.020
+      }
+    }
+  ]
+}
+
+# Viewing area (lighter LCD surface)
+# V/A: 23.40 x 14.00mm = 9.213 x 5.512 VRML
+Transform {
+  translation 0 0 0.890
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.82 0.84 0.78
+          specularColor 0.5 0.5 0.5
+          shininess 0.6
+        }
+      }
+      geometry Box {
+        size 9.213 5.512 0.010
+      }
+    }
+  ]
+}
+
+# Active area (slightly greenish tint)
+# A/A: 21.74 x 11.50mm = 8.559 x 4.528 VRML
+Transform {
+  translation 0 0 0.900
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.78 0.82 0.72
+          specularColor 0.4 0.4 0.4
+          shininess 0.4
+        }
+      }
+      geometry Box {
+        size 8.559 4.528 0.008
+      }
+    }
+  ]
+}
+
+# Controller chip on glass (COG - small dark rectangle on bottom area)
+# Approximate: 8mm x 2mm x 0.5mm, positioned near bottom edge
+# 8mm = 3.150, 2mm = 0.787, 0.5mm = 0.197
+Transform {
+  translation 0 -3.400 0.335
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.1 0.1 0.1
+          specularColor 0.2 0.2 0.2
+          shininess 0.3
+        }
+      }
+      geometry Box {
+        size 3.150 0.787 0.197
+      }
+    }
+  ]
+}
+
+# FPC tail (thin flexible circuit extending from bottom)
+# ~8mm wide, extends ~2mm below glass, very thin
+# 8mm = 3.150, 2mm = 0.787, 0.1mm = 0.039
+Transform {
+  translation 0 -4.625 0.433
+  children [
+    Shape {
+      appearance Appearance {
+        material Material {
+          diffuseColor 0.85 0.65 0.2
+          specularColor 0.6 0.5 0.3
+          shininess 0.3
+        }
+      }
+      geometry Box {
+        size 3.150 0.787 0.039
+      }
+    }
+  ]
+}

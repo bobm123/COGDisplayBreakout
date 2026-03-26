@@ -309,5 +309,16 @@
 		(layer "B.CrtYd")
 		(uuid "a0000601-0000-0000-0000-000000000001")
 	)
+	(model "${KIPRJMOD}/COGDisplayBreakout.3dmodels/ERC12864FSF-11_COG_LCD.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
 	(embedded_fonts no)
 )
