@@ -1,0 +1,49 @@
+Link to .96 COG Display
+
+Description
+
+"ERC12864FSF-11 is 0.96 inch White background with 128x64 monochrome White pixels cog(chip on glass) lcd module,ST7567 controller,compact size,high contrast,wide operating temperature,wide view angle,white led backlight,fstn-lcd positive,fpc connection soldering type fpc connection,It supports 4-wire serial spi interface.
+
+It's easily controlled by MCU such as 8051,PIC,AVR,ARDUINO,ARM and Raspberry Pi.It can be used in any embedded systems,industrial device,security,medical and hand-held equipment.
+
+Of course, we wouldn't just leave you with a datasheet and a "good luck!".For 8051 microcontroller user,we prepared the detailed tutorial such as interfacing, demo code and Development Kit at the bottom of this page."
+
+Black on White (on order):
+https://www.buydisplay.com/0-96-inch-low-cost-white-128x64-graphic-cog-lcd-display-st7567-spi
+
+White on Black:
+https://www.buydisplay.com/0-96-inch-low-cost-black-128x64-graphic-cog-lcd-display-st7567-spi
+
+White on Blue
+https://www.buydisplay.com/0-96-inch-low-cost-blue-128x64-graphic-cog-lcd-display-st7567-spi
+
+This will be fun for later, but they also have a SPI/I2C variant that might be more similar to
+the Adafrui OLED units:
+https://www.buydisplay.com/spi-small-0-96-inch-128x64-graphic-cog-lcd-display-module-for-smart-watch
+
+See the ./ERC12864-10_Series/ directory for details
+- has a 30 pin connector, needs bottom contact style connector
+- slightly smaller case size
+- can use 4-wire SPI or 2-wire I2C (TST5 pin to cuttable jumper)
+- Backlight pins on ribbon cable
+
+From Github U8g2 page:
+https://github.com/olikraus/u8g2/wiki/u8x8setupcpp#st7567-erc12864
+
+Controller "st7567", Display "erc12864"
+U8X8_ST7567_ERC12864_4W_SW_SPI(clk, data, cs, dc [, reset])
+U8X8_ST7567_ERC12864_4W_HW_SPI(cs, dc [, reset])
+U8X8_ST7567_ERC12864_2ND_4W_HW_SPI(cs, dc [, reset])
+U8X8_ST7567_ERC12864_3W_SW_SPI(clk, data, cs [, reset])
+U8X8_ST7567_ERC12864_3W_HW_SPI(cs [, reset])
+U8X8_ST7567_ERC12864_6800(d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc [, reset])
+U8X8_ST7567_ERC12864_8080(d0, d1, d2, d3, d4, d5, d6, d7, enable, cs, dc [, reset])
+
+Actually, its the U8g2 library
+U8G2_ST7565_ERC12864_ALT_1_4W_SW_SPI u8g2(U8G2_R0, /* clock=*/ 10, /* data=*/ 7, /* cs=*/ 6, /* dc=*/ 8, /* reset=*/ 5);
+
+Docs
+https://github.com/olikraus/u8g2/wiki/u8g2setupcpp#st7565-erc12864_alt
+https://github.com/olikraus/u8g2/wiki/u8g2reference#carduino-example
+
+
