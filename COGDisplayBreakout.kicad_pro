@@ -504,7 +504,7 @@
       "plot": "Gerbers20260323/",
       "pos_files": "",
       "specctra_dsn": "",
-      "step": "",
+      "step": "COGDisplayBreakout.step",
       "svg": "",
       "vrml": ""
     },

@@ -17,7 +17,7 @@
 		)
 	)
 	(property "Value" "ERC12864FSF-11"
-		(at 0 13.5 0)
+		(at 0 -5.4 0)
 		(layer "F.Fab")
 		(uuid "a0000002-0000-0000-0000-000000000002")
 		(effects
@@ -124,16 +124,85 @@
 		(layer "B.CrtYd")
 		(uuid "a0000601-0000-0000-0000-000000000001")
 	)
-	(fp_rect
+	(fp_line
 		(start -14.15 -11.25)
-		(end 14.15 13.05)
+		(end 14.15 -11.25)
 		(stroke
 			(width 0.05)
 			(type solid)
 		)
-		(fill no)
 		(layer "F.CrtYd")
 		(uuid "a0000030-0000-0000-0000-000000000030")
+	)
+	(fp_line
+		(start -14.15 11.25)
+		(end -14.15 -11.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a0000037-0000-0000-0000-000000000037")
+	)
+	(fp_line
+		(start -5.2 11.25)
+		(end -14.15 11.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a0000036-0000-0000-0000-000000000036")
+	)
+	(fp_line
+		(start -5.2 14)
+		(end -5.2 11.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a0000035-0000-0000-0000-000000000035")
+	)
+	(fp_line
+		(start 5.2 11.25)
+		(end 5.2 14)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a0000033-0000-0000-0000-000000000033")
+	)
+	(fp_line
+		(start 5.2 14)
+		(end -5.2 14)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a0000034-0000-0000-0000-000000000034")
+	)
+	(fp_line
+		(start 14.15 -11.25)
+		(end 14.15 11.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a0000031-0000-0000-0000-000000000031")
+	)
+	(fp_line
+		(start 14.15 11.25)
+		(end 5.2 11.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "a0000032-0000-0000-0000-000000000032")
 	)
 	(fp_line
 		(start -13.65 -10.75)
@@ -249,25 +318,11 @@
 		(uuid "a0000201-0000-0000-0000-000000000001")
 	)
 	(pad "" np_thru_hole oval
-		(at -7.45 9.55)
-		(size 1.4 0.6)
-		(drill oval 1.4 0.6)
-		(layers "*.Cu" "*.Mask")
-		(uuid "a0000301-0000-0000-0000-000000000001")
-	)
-	(pad "" np_thru_hole oval
-		(at 0 11.35)
+		(at 0 12.95)
 		(size 8.5 1.2)
 		(drill oval 8.5 1.2)
 		(layers "*.Cu" "*.Mask")
 		(uuid "a0000401-0000-0000-0000-000000000001")
-	)
-	(pad "" np_thru_hole oval
-		(at 7.45 9.55)
-		(size 1.4 0.6)
-		(drill oval 1.4 0.6)
-		(layers "*.Cu" "*.Mask")
-		(uuid "a0000302-0000-0000-0000-000000000002")
 	)
 	(pad "" np_thru_hole circle
 		(at 12.6 -9.7)
@@ -348,8 +403,25 @@
 		(layers "B.Cu" "B.Mask" "B.Paste")
 		(uuid "a0000101-0000-0000-0000-000000000001")
 	)
+	(pad "A" thru_hole oval
+		(at 7.45 9.55)
+		(size 2.6 1.2)
+		(drill oval 2.1 0.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a0000302-0000-0000-0000-000000000002")
+	)
+	(pad "K" thru_hole oval
+		(at -7.45 9.55)
+		(size 2.6 1.2)
+		(drill oval 2.1 0.7)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "a0000301-0000-0000-0000-000000000001")
+	)
 	(embedded_fonts no)
 	(model "D:/Projects/COGDisplayBreakout/COGDisplayBreakout/COGDisplayBreakout.3dmodels/ERC12864FSF-11_COG_LCD.wrl"
+		(hide yes)
 		(offset
 			(xyz 0 0 0)
 		)
@@ -358,6 +430,17 @@
 		)
 		(rotate
 			(xyz 0 0 0)
+		)
+	)
+	(model "D:/Projects/COGDisplayBreakout/COGDisplayBreakout/COGDisplayBreakout.3dmodels/ERC12864FSF-11.step"
+		(offset
+			(xyz 0 -9.99 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -0 -0 -0)
 		)
 	)
 )
