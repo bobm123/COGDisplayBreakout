@@ -1,0 +1,18 @@
+Notes on V0.1 board sent to Fab on 3/3/2026
+- Error in schematic has C1 (1uf) from V0 to ground. Leave this unpopulated
+- Should have a second cap across 3.3 and gnd. C3/100nF is ok. if possible add a 10uF somewhere
+- VG (currently unconnected, pin12 on connector) should have a 1uF cap to ground.
+  -- possible remedy: 
+    1) cut trace between C1 and C2. 
+    2) cut trace From V0 to C2 pin 1 
+    3) reconnect C2 pin 1 connector pin 12 (VG) with white wire  
+- Same layout also sent to pcbway, back about the same time as oshpark board, both wrong!
+
+Notes on V0.2 board, sent to Fab on 3/23/2026
+- K and A swapped, avoid placing the resister
+- Try bending tabs and insulate top 
+- or file back the board and blue wire w/ 200R
+- Should have used hand solder 0805 pads
+- unconnected 3Vo pin, consider using this for LED on/off 
+- check for an extra GND connection at V0 or VX0
+- consider changing the 3Vo pin (unused) to a LED on function
