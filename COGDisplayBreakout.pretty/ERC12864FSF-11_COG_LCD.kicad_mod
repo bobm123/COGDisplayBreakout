@@ -104,7 +104,7 @@
 	)
 	(fp_rect
 		(start -4.25 -3.55)
-		(end 4.25 11.95)
+		(end 4.25 9.75)
 		(stroke
 			(width 0.12)
 			(type solid)
@@ -125,8 +125,8 @@
 		(uuid "a0000601-0000-0000-0000-000000000001")
 	)
 	(fp_line
-		(start -14.15 -11.25)
-		(end 14.15 -11.25)
+		(start -13.8 -10.9)
+		(end 13.8 -10.9)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -135,8 +135,8 @@
 		(uuid "a0000030-0000-0000-0000-000000000030")
 	)
 	(fp_line
-		(start -14.15 11.25)
-		(end -14.15 -11.25)
+		(start -13.8 10.9)
+		(end -13.8 -10.9)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -145,8 +145,8 @@
 		(uuid "a0000037-0000-0000-0000-000000000037")
 	)
 	(fp_line
-		(start -5.2 11.25)
-		(end -14.15 11.25)
+		(start -5.2 10.925)
+		(end -13.8 10.9)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -155,8 +155,8 @@
 		(uuid "a0000036-0000-0000-0000-000000000036")
 	)
 	(fp_line
-		(start -5.2 14)
-		(end -5.2 11.25)
+		(start -5.2 13.675)
+		(end -5.2 10.925)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -165,8 +165,8 @@
 		(uuid "a0000035-0000-0000-0000-000000000035")
 	)
 	(fp_line
-		(start 5.2 11.25)
-		(end 5.2 14)
+		(start 5.2 10.925)
+		(end 5.2 13.675)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -175,8 +175,8 @@
 		(uuid "a0000033-0000-0000-0000-000000000033")
 	)
 	(fp_line
-		(start 5.2 14)
-		(end -5.2 14)
+		(start 5.2 13.675)
+		(end -5.2 13.675)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -185,8 +185,8 @@
 		(uuid "a0000034-0000-0000-0000-000000000034")
 	)
 	(fp_line
-		(start 14.15 -11.25)
-		(end 14.15 11.25)
+		(start 13.8 -10.9)
+		(end 13.8 10.925)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -195,8 +195,8 @@
 		(uuid "a0000031-0000-0000-0000-000000000031")
 	)
 	(fp_line
-		(start 14.15 11.25)
-		(end 5.2 11.25)
+		(start 13.8 10.925)
+		(end 5.2 10.925)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -405,16 +405,16 @@
 	)
 	(pad "A" thru_hole oval
 		(at 7.45 9.55)
-		(size 2.6 1.2)
-		(drill oval 2.1 0.7)
+		(size 2.8 1.6)
+		(drill oval 2 0.8)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "a0000302-0000-0000-0000-000000000002")
 	)
 	(pad "K" thru_hole oval
 		(at -7.45 9.55)
-		(size 2.6 1.2)
-		(drill oval 2.1 0.7)
+		(size 2.8 1.6)
+		(drill oval 2 0.8)
 		(layers "*.Cu" "*.Mask")
 		(remove_unused_layers no)
 		(uuid "a0000301-0000-0000-0000-000000000001")

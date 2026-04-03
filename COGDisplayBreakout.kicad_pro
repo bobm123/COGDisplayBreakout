@@ -58,7 +58,12 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        [
+          "lib_footprint_mismatch|148047300|81687100|7eac4e4e-e938-4ee8-8f25-918b967c013c|00000000-0000-0000-0000-000000000000",
+          ""
+        ]
+      ],
       "meta": {
         "version": 2
       },
@@ -501,7 +506,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "Gerbers20260323/",
+      "plot": "Gerbers20260403/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "COGDisplayBreakout.step",
