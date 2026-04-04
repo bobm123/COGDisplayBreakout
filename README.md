@@ -70,7 +70,7 @@ The schematic connects the ERC12864FSF-11 display to an 8-pin SPI header (J1) wi
 
 The ST7567's built-in voltage booster generates the LCD bias voltage using external capacitors C3, and C4. No regulator or level shifting is included; the board is 3.3V only. Capacitors C1 and C2 are for decoupling. The R1 value was taken from the reference design, but for 10-20 mA LED current should be about 200 Ohm.
 
-![Breakout board schematic](images/Clipboard3.png)
+![Breakout board schematic](images/Clipboard03.png)
 
 ### PCB
 
@@ -78,9 +78,9 @@ This is a 2-layer board, ~27x27mm. The display's 12-pin FFC cable (0.6mm pitch) 
 
 The display's 12-pin FFC cable is a non-standard 0.6mm pitch, so bust be soldered directly to pads on the breakout PCB.
 
-![PCB - front (ground plane copper hidden)](images/Clipboard1.png)
+![PCB - front (ground plane copper hidden)](images/Clipboard01.png)
 
-![PCB - back](images/Clipboard2.png)
+![PCB - back](images/Clipboard02.png)
 
 ### Board Revisions
 
