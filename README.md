@@ -1,10 +1,10 @@
 # COG Display Breakout
 
-A breakout board for the **ERC12864FSF-11** COG LCD module (0.96", 128x64, ST7567 controller, 4-wire SPI). The display's 12-pin FFC cable (0.6mm pitch, non-standard) is soldered directly to pads on the breakout PCB, which routes signals to a breadboard-friendly 2.54mm pin header with on-board charge pump capacitors and backlight drive circuit.
+This is a breakout board for the **ERC12864FSF-11** COG (Chip On Glass) LCD module (0.96", 128x64, ST7567 controller, 4-wire SPI). The PCB routes the display's inputs from 12-pin its FFC cable to a breadboard-friendly 2.54mm pin header. Its also exposes the backlight LED and provides a few discrete components for LCD module.
 
-Designed to match the Adafruit 0.96" OLED module form factor (~27x27mm, 4 mounting holes) as a drop-in replacement.
+Designed have a similar form factor (~27x27mm, 4 mounting holes, pin headers) to the Adafruit [0.96" OLED module](https://www.adafruit.com/product/326) and similar 1" displays.
 
-COG (Chip On Glass) LCD technology differs from the OLED displays commonly found on breakout boards of this size. COG LCDs are daylight readable like e-paper, but with simpler hardware and software requirements. However, they may need a backlight in low-light conditions, so the breakout includes drive circuitry for the display's built-in LED backlight.
+LCD technology differs from the OLED displays commonly found on breakout boards of this size. This display is daylight readable like e-paper, but with simpler hardware and software requirements. However, LCDs may need a backlight in low-light conditions, so the breakout includes connections display's built-in LED backlight with an option for always on operation.
 
 ![KiCad 3D render of the breakout board](images/ScreenShot.png)
 
@@ -18,7 +18,7 @@ COG (Chip On Glass) LCD technology differs from the OLED displays commonly found
 | Interface | 4-wire SPI |
 | Supply voltage | 3.3V only |
 | Board size | ~27 x 27mm |
-| Mounting | 4x M2 holes, Adafruit OLED compatible |
+| Mounting | 4x M2 holes |
 
 ## Repository Structure
 
@@ -27,6 +27,7 @@ ArduinoCode/                             Example sketches for ESP32-C3
 COGDisplayBreakout.pretty/               Custom footprint library
 COGDisplayBreakout.3dmodels/             Custom 3D models
 docs/                                    Datasheets, reference designs, tutorials
+step/                                    3D models of the board and a small case
 COGDisplayBreakout.kicad_sch             Schematic
 COGDisplayBreakout.kicad_pcb             PCB layout
 COGDisplayBreakout.kicad_sym             Custom symbol library
@@ -41,20 +42,20 @@ The KiCad 9 project files are at the repository root.
 
 ### Circuit Overview
 
-The schematic connects the ERC12864FSF-11 display to an 8-pin SPI header (J2) with supporting passives:
+The schematic connects the ERC12864FSF-11 display to an 8-pin SPI header (J1) with supporting passives:
 
-**Header pinout (J2 - SPI_Header):**
+**Header pinout (J1 - SPI_Header):**
 
 | Pin | Signal | Description |
 |-----|--------|-------------|
-| 1 | GND | Ground |
-| 2 | VDD | +3.3V supply |
-| 3 | SCL | SPI clock |
-| 4 | SDA | SPI data (MOSI) |
+| 1 | SDA | SPI data (MOSI) |
+| 2 | SCL | SPI clock |
+| 3 | A0 | Data/command select (DC) |
+| 4 | /RST | Reset (active low) |
 | 5 | /CS | Chip select (active low) |
-| 6 | A0 | Data/command select (DC) |
-| 7 | /RST | Reset (active low) |
-| 8 | 3V0 | 3.3V (unused, reserved for future LED control) |
+| 6 | LED | LED control |
+| 7 | VDD | +3.3V supply |
+| 8 | GND | Ground |
 
 **Passive components:**
 
@@ -70,14 +71,20 @@ The ST7567's built-in voltage booster generates the LCD bias voltage using exter
 
 ### PCB
 
-2-layer board, ~27x27mm. The display's 12-pin FFC cable (0.6mm pitch) is soldered directly to SMD pads on the back side; the display module mounts flat against the front. Four M2 mounting holes at the corners match the Adafruit OLED module footprint.
+This is a 2-layer board, ~27x27mm. The display's 12-pin FFC cable (0.6mm pitch) is soldered directly to SMD pads on the back side. The display module mounts flat against the front by means of plastic mounting pins on the display case and the solder tabs for the backlight LED. Four M2 mounting holes at the corners matching similar OLED modules.
+
+The display's 12-pin FFC cable is a non-standard 0.6mm pitch, so bust be soldered directly to pads on the breakout PCB.
 
 ### Board Revisions
 
 - **V0.1** (March 2026) - Initial prototype. Known issues: C1 wiring error, missing VG capacitor. See `AssemblyNotes.txt` for workarounds.
-- **V0.2** (March 2026) - Fixed capacitor circuit. Known issue: backlight A/K pads swapped. See `AssemblyNotes.txt`.
 
-Gerber files: V0.1 in `COGDisplayBreakout-Gerbers-20260303.zip`, V0.2 in `Gerbers20260323/`.
+- **V0.2** (March 2026) - Fixed capacitor circuit. Known issue: backlight A/K pads swapped. See `AssemblyNotes.txt`.
+Gerber files: V0.2 in `Gerbers20260323/`.
+
+- **V1.0** (April 2026) - Fixed A/K pads and connected LED control to pin 6. See `AssemblyNotes.txt`.
+Gerber files: V0.2 in `Gerbers20260403/`.
+
 
 ---
 
@@ -129,13 +136,13 @@ Note: The backlight pins (A, K) are separate solder tabs on the display module, 
 | `ERC12864FSF-11.step` | STEP | Solid body model for KiCad 3D viewer |
 | `ERC12864FSF-11_COG_LCD.wrl` | VRML | Lightweight preview model |
 
-The STEP model is referenced by the footprint and renders in KiCad's 3D viewer.
+The STEP model is referenced by the footprint and renders in KiCad's 3D viewer and to export the PCB with components as a 3D model.
 
 ---
 
 ## Arduino Code
 
-Example sketches are in `ArduinoCode/`, targeting the **Adafruit QT Py ESP32-C3** with the **U8g2** graphics library.
+Example sketches are in `ArduinoCode/`, targeting the [**Adafruit QT Py ESP32-C3**](https://www.adafruit.com/product/5405) with the **U8g2** graphics library.
 
 ### Dependencies
 
@@ -147,16 +154,30 @@ Install U8g2 via the Arduino IDE Library Manager.
 ### Pin Mapping (QT Py ESP32-C3 to breakout header)
 
 | Display Signal | Header Pin | QT Py Pin | ESP32-C3 GPIO |
-|----------------|-----------|-----------|---------------|
+|----------------|------------|-----------|---------------|
+| SCL (clock) | 1 | SCK | 10 |
+| SDA (data) | 2 | MO | 7 |
+| A0 (DC) | 3 | MI* | 8 |
+| /RST | 4 | SDA* | 5 |
+| /CS | 5 | SCL* | 6 |
+| LED | 6 | A3 | - |
 | GND | 1 | GND | - |
 | VDD | 2 | 3V3 | - |
-| SCL (clock) | 3 | SCK | 10 |
-| SDA (data) | 4 | MO | 7 |
-| /CS | 5 | SCL* | 6 |
-| A0 (DC) | 6 | MI* | 8 |
-| /RST | 7 | SDA* | 5 |
 
-*These I2C/SPI pins are repurposed as GPIO since the QT Py has limited pins.
+*These I2C/SPI pins are repurposed as GPIO since the QT Py has limited pins. The ERC12864 does not provide data out, so the MISO pin is used for Data/Control.
+
+### Sketches
+
+Here are some Arduino sketches to run on A XIAO style board like Adafruit's QT Py ESP32-C3 with the connections shown above
+
+![Breadboard with QT Py ESP32-C3 and display running ERC12864_Hello](images/Image1.png)
+
+| Sketch | Description |
+|--------|-------------|
+| `ERC12864_Hello/` | Minimal hello-world with text and simple graphics. Also blinks the on-board NeoPixel. |
+| `ERC12864_SPIDemo/` | Port of the manufacturer's C tutorial. Cycles through text, graphics primitives, XBM bitmap, and test patterns. Includes commented-out contrast adjustment code for future button support. |
+| `GraphicsTest/` | U8g2 graphics test suite (from the U8g2 examples, configured for this display). |
+| `ScrollingText/` | U8g2 scrolling text demo (from the U8g2 examples, configured for this display). |
 
 ### U8g2 Constructor
 
@@ -171,18 +192,6 @@ U8G2_ST7565_ERC12864_ALT_F_4W_SW_SPI u8g2(U8G2_R0,
 - `_F_` - full framebuffer mode (~1KB RAM)
 - `4W_SW_SPI` - 4-wire software SPI
 
-### Sketches
-
-Here are some Arduino sketches to run on A XIAO style board like Adafruit's QT Py ESP32-C3
-
-![Breadboard with QT Py ESP32-C3 and display running ERC12864_Hello](images/Image1.png)
-
-| Sketch | Description |
-|--------|-------------|
-| `ERC12864_Hello/` | Minimal hello-world with text and simple graphics. Also blinks the on-board NeoPixel. |
-| `ERC12864_SPIDemo/` | Port of the manufacturer's C tutorial. Cycles through text, graphics primitives, XBM bitmap, and test patterns. Includes commented-out contrast adjustment code for future button support. |
-| `GraphicsTest/` | U8g2 graphics test suite (from the U8g2 examples, configured for this display). |
-| `ScrollingText/` | U8g2 scrolling text demo (from the U8g2 examples, configured for this display). |
 
 ---
 
