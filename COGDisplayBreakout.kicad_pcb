@@ -1438,7 +1438,7 @@
 		(at 139.1573 81.6871 -90)
 		(descr "Through hole straight pin header, 1x08, 2.54mm pitch, single row")
 		(tags "Through hole pin header THT 1x08 2.54mm single row")
-		(property "Reference" "J2"
+		(property "Reference" "J1"
 			(at 0 2.38 90)
 			(layer "B.SilkS")
 			(hide yes)
