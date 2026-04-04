@@ -62,12 +62,12 @@ The schematic connects the ERC12864FSF-11 display to an 8-pin SPI header (J1) wi
 | Ref | Value | Purpose |
 |-----|-------|---------|
 | R1 | 20R | Backlight LED current-limiting resistor |
-| C1 | 10uF | Charge pump capacitor (V0 to XV0) |
+| C1 | 10uF |  VDD bypass capacitor|
 | C2 | 100nF | VDD bypass capacitor |
-| C3 | 1uF | Charge pump capacitor (V0 to GND) |
-| C4 | 1uF | VG decoupling capacitor |
+| C3 | 1uF | Charge pump capacitor (V0 to XV0) |
+| C4 | 1uF | Charge pump capacitor (V0 to GND) |
 
-The ST7567's built-in voltage booster generates the LCD bias voltage using external capacitors C1, C3, and C4. No regulator or level shifting is included; the board is 3.3V only.
+The ST7567's built-in voltage booster generates the LCD bias voltage using external capacitors C1, C3, and C4. No regulator or level shifting is included; the board is 3.3V only. R1 value taken from the reference design, but for 10-20 mA LED current should be about 200 Ohm.
 
 ### PCB
 
