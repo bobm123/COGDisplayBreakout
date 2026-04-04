@@ -76,11 +76,13 @@ The ST7567's built-in voltage booster generates the LCD bias voltage using exter
 
 This is a 2-layer board, ~27x27mm. The display's 12-pin FFC cable (0.6mm pitch) is soldered directly to SMD pads on the back side. The display module mounts flat against the front by means of plastic mounting pins on the display case and the solder tabs for the backlight LED. Four M2 mounting holes at the corners matching similar OLED modules.
 
-The display's 12-pin FFC cable is a non-standard 0.6mm pitch, so bust be soldered directly to pads on the breakout PCB.
+The display's 12-pin FFC cable is a non-standard 0.6mm pitch, so must be soldered directly to pads on the breakout PCB.
 
-![PCB - front (ground plane copper hidden)](images/Clipboard01.png)
+![PCB - front](images/Clipboard01.png)
+PCB Front (ground plane copper hidden)
 
 ![PCB - back](images/Clipboard02.png)
+PCB Back
 
 ### Board Revisions
 
