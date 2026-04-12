@@ -907,6 +907,173 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Diode:1N4148"
+			(pin_numbers
+				(hide yes)
+			)
+			(pin_names
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "D"
+				(at 0 2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "1N4148"
+				(at 0 -2.54 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" "Diode_THT:D_DO-35_SOD27_P7.62mm_Horizontal"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "100V 0.15A standard switching diode, DO-35"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Device" "D"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "diode"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "D*DO?35*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "1N4148_0_1"
+				(polyline
+					(pts
+						(xy -1.27 1.27) (xy -1.27 -1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 1.27) (xy 1.27 -1.27) (xy -1.27 0) (xy 1.27 1.27)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 0) (xy -1.27 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "1N4148_1_1"
+				(pin passive line
+					(at -3.81 0 0)
+					(length 2.54)
+					(name "K"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 3.81 0 180)
+					(length 2.54)
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "Jumper:SolderJumper_2_Open"
 			(pin_numbers
 				(hide yes)
@@ -1176,6 +1343,147 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Power_Management:APX803S"
+			(pin_names
+				(offset 0.254)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "U"
+				(at -3.81 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "APX803S"
+				(at 0 3.175 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(justify left)
+				)
+			)
+			(property "Footprint" "Package_TO_SOT_SMD:TSOT-23"
+				(at 0 5.715 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://www.diodes.com/assets/Datasheets/APX803S.pdf"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "3-Pin Microprocessor Reset Circuit"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "linear regulator ldo fixed positive"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "TSOT?23*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "APX803S_0_1"
+				(rectangle
+					(start -5.08 1.905)
+					(end 5.08 -5.08)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+			)
+			(symbol "APX803S_1_1"
+				(pin power_in line
+					(at -7.62 0 0)
+					(length 2.54)
+					(name "VCC"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin power_in line
+					(at 0 -7.62 90)
+					(length 2.54)
+					(name "GND"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin open_collector line
+					(at 7.62 0 180)
+					(length 2.54)
+					(name "/RST"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 		(symbol "power:+3V3"
 			(power)
 			(pin_numbers
@@ -1433,6 +1741,16 @@
 		)
 		(uuid "a0000001-0001-0001-0001-000000000005")
 	)
+	(text "Power-on Reset"
+		(exclude_from_sim no)
+		(at 91.44 145.796 0)
+		(effects
+			(font
+				(size 1.524 1.524)
+			)
+		)
+		(uuid "f0f32adf-6139-4291-8c46-c1bd4b6ddbe0")
+	)
 	(junction
 		(at 110.49 66.04)
 		(diameter 0)
@@ -1451,6 +1769,24 @@
 		(color 0 0 0 0)
 		(uuid "6691b2c0-f62c-49dd-bd11-75715cf19b6a")
 	)
+	(junction
+		(at 105.41 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7e384201-b582-4444-bcf9-1bc13e52767a")
+	)
+	(junction
+		(at 67.31 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "8075149d-f28b-4434-9031-8355ce505177")
+	)
+	(junction
+		(at 92.71 109.22)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "c903d6ad-537f-4ac3-b60e-0f4ad1530ac5")
+	)
 	(wire
 		(pts
 			(xy 166.37 69.85) (xy 177.8 69.85)
@@ -1460,6 +1796,16 @@
 			(type default)
 		)
 		(uuid "031376f6-dc47-4412-8f3f-a799c9fce3ae")
+	)
+	(wire
+		(pts
+			(xy 74.93 124.46) (xy 83.82 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "05d485ca-843b-491c-bcb6-53ab3df77531")
 	)
 	(wire
 		(pts
@@ -1543,6 +1889,16 @@
 	)
 	(wire
 		(pts
+			(xy 105.41 124.46) (xy 99.06 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "4b8312f3-cca0-4dae-8122-2622b659d878")
+	)
+	(wire
+		(pts
 			(xy 52.07 76.2) (xy 52.07 81.28)
 		)
 		(stroke
@@ -1550,6 +1906,16 @@
 			(type default)
 		)
 		(uuid "529a61eb-579a-4526-875c-7e421868e472")
+	)
+	(wire
+		(pts
+			(xy 91.44 132.08) (xy 91.44 137.16)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5f7a0f0b-8d07-4658-8744-ab28baef015f")
 	)
 	(wire
 		(pts
@@ -1593,13 +1959,23 @@
 	)
 	(wire
 		(pts
-			(xy 63.5 78.74) (xy 73.66 78.74)
+			(xy 59.69 78.74) (xy 73.66 78.74)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
 		(uuid "7f475b49-d2b1-4937-9560-9bd699ca1f0b")
+	)
+	(wire
+		(pts
+			(xy 105.41 109.22) (xy 114.3 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8469b76e-7f45-4ddb-be16-24085bc75a50")
 	)
 	(wire
 		(pts
@@ -1623,6 +1999,16 @@
 	)
 	(wire
 		(pts
+			(xy 92.71 102.87) (xy 92.71 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "92044d79-1bfe-462f-9f8d-b2b928302c22")
+	)
+	(wire
+		(pts
 			(xy 135.89 76.2) (xy 140.97 76.2)
 		)
 		(stroke
@@ -1630,6 +2016,26 @@
 			(type default)
 		)
 		(uuid "9565ff28-bc90-40f6-b167-a458ed0f0e58")
+	)
+	(wire
+		(pts
+			(xy 92.71 109.22) (xy 105.41 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "971324d5-f42e-46a0-8f65-7fbb85e4ed8f")
+	)
+	(wire
+		(pts
+			(xy 67.31 109.22) (xy 78.74 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "98b920b7-df2e-42d1-bb09-bea8f6769e73")
 	)
 	(wire
 		(pts
@@ -1653,6 +2059,16 @@
 	)
 	(wire
 		(pts
+			(xy 86.36 109.22) (xy 92.71 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a196a915-6231-48fb-8f45-720e3b6fa389")
+	)
+	(wire
+		(pts
 			(xy 207.01 95.25) (xy 207.01 101.6)
 		)
 		(stroke
@@ -1663,7 +2079,17 @@
 	)
 	(wire
 		(pts
-			(xy 73.66 73.66) (xy 63.5 73.66)
+			(xy 74.93 120.65) (xy 74.93 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a66fc955-baca-4007-a5a1-a49653a2bc23")
+	)
+	(wire
+		(pts
+			(xy 73.66 73.66) (xy 67.31 73.66)
 		)
 		(stroke
 			(width 0)
@@ -1693,6 +2119,16 @@
 	)
 	(wire
 		(pts
+			(xy 92.71 88.9) (xy 92.71 95.25)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b0f0feb2-3aac-44d0-86af-d730b811d086")
+	)
+	(wire
+		(pts
 			(xy 100.33 78.74) (xy 110.49 78.74)
 		)
 		(stroke
@@ -1700,6 +2136,16 @@
 			(type default)
 		)
 		(uuid "b1ce1495-378c-455c-8460-34c9b69be062")
+	)
+	(wire
+		(pts
+			(xy 67.31 73.66) (xy 67.31 109.22)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b5b615e3-abef-42b6-a455-2ec8a3591242")
 	)
 	(wire
 		(pts
@@ -1780,6 +2226,16 @@
 			(type default)
 		)
 		(uuid "d1895909-9b87-4a57-be51-e48d52d81442")
+	)
+	(wire
+		(pts
+			(xy 105.41 109.22) (xy 105.41 124.46)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d37d6b44-1c1c-4399-9381-1317ba8ae826")
 	)
 	(wire
 		(pts
@@ -1891,6 +2347,16 @@
 		)
 		(uuid "fad5e60e-78e9-47ed-a353-b236d676f820")
 	)
+	(wire
+		(pts
+			(xy 67.31 73.66) (xy 63.5 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fea0a46b-c0f2-4f75-8201-cbac2f347d93")
+	)
 	(label "VG"
 		(at 207.01 85.09 0)
 		(effects
@@ -1952,7 +2418,7 @@
 		(uuid "958d2670-9ebd-47f4-96cb-5e446305ff4a")
 	)
 	(label "LED"
-		(at 63.5 78.74 0)
+		(at 59.69 78.74 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2011,7 +2477,7 @@
 		)
 		(uuid "b0000002-0001-0001-0001-000000000007")
 	)
-	(label "/RST"
+	(label "{slash}RES_3V"
 		(at 166.37 67.31 0)
 		(effects
 			(font
@@ -2040,6 +2506,81 @@
 			(justify left bottom)
 		)
 		(uuid "ee0bc501-8812-4b51-bbc0-a5219a615ad2")
+	)
+	(label "{slash}RES_3V"
+		(at 106.68 109.22 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "f7bc9af7-53ce-4f68-b7ac-010141b61705")
+	)
+	(symbol
+		(lib_id "power:+3V3")
+		(at 74.93 120.65 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1cb372b5-dd78-4da1-abca-56055ca24b36")
+		(property "Reference" "#PWR010"
+			(at 74.93 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 74.93 117.094 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 74.93 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 74.93 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 74.93 120.65 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "27804822-dd7c-4240-9235-ec5104cf593c")
+		)
+		(instances
+			(project "COGDisplayBreakout"
+				(path "/5d6668f5-9efd-4633-a357-e3746984ef57"
+					(reference "#PWR010")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "COGDisplayBreakout:ERC12864FSF-11")
@@ -2498,6 +3039,92 @@
 		)
 	)
 	(symbol
+		(lib_id "Diode:1N4148")
+		(at 82.55 109.22 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "63226734-c325-48d0-98f4-761c9725398a")
+		(property "Reference" "D1"
+			(at 82.55 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "1N4148"
+			(at 82.55 105.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_0805_2012Metric_Pad1.15x1.40mm_HandSolder"
+			(at 82.55 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf"
+			(at 82.55 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "100V 0.15A standard switching diode, DO-35"
+			(at 82.55 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Device" "D"
+			(at 82.55 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Sim.Pins" "1=K 2=A"
+			(at 82.55 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "303a512b-1dd0-423b-8315-59d0de9ae409")
+		)
+		(pin "1"
+			(uuid "5bfc9796-9bcb-4de2-8d65-7ea934891282")
+		)
+		(instances
+			(project ""
+				(path "/5d6668f5-9efd-4633-a357-e3746984ef57"
+					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 140.97 96.52 0)
 		(unit 1)
@@ -2557,6 +3184,71 @@
 			(project "COGDisplayBreakout"
 				(path "/5d6668f5-9efd-4633-a357-e3746984ef57"
 					(reference "#PWR07")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 91.44 137.16 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "746f351c-257a-45d3-b00e-147f013db6d8")
+		(property "Reference" "#PWR011"
+			(at 91.44 143.51 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "GND"
+			(at 91.44 140.97 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 91.44 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 91.44 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 91.44 137.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "879e6709-94c9-42b4-b692-a8bedce342e7")
+		)
+		(instances
+			(project "COGDisplayBreakout"
+				(path "/5d6668f5-9efd-4633-a357-e3746984ef57"
+					(reference "#PWR011")
 					(unit 1)
 				)
 			)
@@ -2628,6 +3320,141 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+3V3")
+		(at 92.71 88.9 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "ac130ec5-4254-41b3-8ec3-1e5a78309cee")
+		(property "Reference" "#PWR04"
+			(at 92.71 92.71 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+3V3"
+			(at 92.71 85.344 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 92.71 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 92.71 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 92.71 88.9 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "a57206af-7093-4bdc-9919-56ce78b9811b")
+		)
+		(instances
+			(project "COGDisplayBreakout"
+				(path "/5d6668f5-9efd-4633-a357-e3746984ef57"
+					(reference "#PWR04")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 92.71 99.06 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "af128e41-74c4-4994-81c7-bcce10db3730")
+		(property "Reference" "R2"
+			(at 95.25 97.7899 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "R"
+			(at 95.25 100.3299 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder"
+			(at 90.932 99.06 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 92.71 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 92.71 99.06 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "e6ec1579-a9ba-4b81-bc2b-9e45261d4bcc")
+		)
+		(pin "2"
+			(uuid "7b8fa75b-a3df-4b01-badc-023fe54793b1")
+		)
+		(instances
+			(project ""
+				(path "/5d6668f5-9efd-4633-a357-e3746984ef57"
+					(reference "R2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:C")
 		(at 219.71 77.47 0)
 		(unit 1)
@@ -2691,6 +3518,79 @@
 			(project "COGDisplayBreakout"
 				(path "/5d6668f5-9efd-4633-a357-e3746984ef57"
 					(reference "C3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Power_Management:APX803S")
+		(at 91.44 124.46 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "cb902337-4981-4e5e-ba23-b6795ac37e38")
+		(property "Reference" "U1"
+			(at 95.504 120.904 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Value" "APX803S"
+			(at 95.504 118.364 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Package_TO_SOT_SMD:TSOT-23"
+			(at 91.44 118.745 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+					(italic yes)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://www.diodes.com/assets/Datasheets/APX803S.pdf"
+			(at 91.44 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "3-Pin Microprocessor Reset Circuit"
+			(at 91.44 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "c35f6121-2059-4ab3-8c3d-b63e466fdd44")
+		)
+		(pin "3"
+			(uuid "691115cf-9a4c-4cea-ac04-fe6de1ecdd67")
+		)
+		(pin "2"
+			(uuid "7e5e26e5-4ad6-4203-a9f3-74a28595b9e6")
+		)
+		(instances
+			(project ""
+				(path "/5d6668f5-9efd-4633-a357-e3746984ef57"
+					(reference "U1")
 					(unit 1)
 				)
 			)

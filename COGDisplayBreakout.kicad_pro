@@ -58,12 +58,7 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [
-        [
-          "lib_footprint_mismatch|148047300|81687100|7eac4e4e-e938-4ee8-8f25-918b967c013c|00000000-0000-0000-0000-000000000000",
-          ""
-        ]
-      ],
+      "drc_exclusions": [],
       "meta": {
         "version": 2
       },
@@ -193,7 +188,7 @@
       ],
       "track_widths": [
         0.0,
-        0.5
+        0.2
       ],
       "tuning_pattern_settings": {
         "diff_pair_defaults": {
