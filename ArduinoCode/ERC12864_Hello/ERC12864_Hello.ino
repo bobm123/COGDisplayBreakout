@@ -4,8 +4,9 @@
 #include <SPI.h>
 
 //QT Py ESP32-C3 pin mappings
-U8G2_ST7565_ERC12864_ALT_F_4W_SW_SPI u8g2(U8G2_R0, /* clock=*/ 10, /* data=*/ 7, /* cs=*/ 6, /* dc=*/ 8, /* reset=*/ 5);
-//U8G2_ST7565_ERC12864_ALT_F_4W_SW_SPI u8g2(U8G2_R0, /* clock=*/ 10, /* data=*/ 7, /* cs=*/ 6, /* dc=*/ 8);
+// /CS is tied to GND on the breakout board (display always selected).
+// If sharing the SPI bus with other devices, connect /CS to a GPIO and replace U8X8_PIN_NONE.
+U8G2_ST7565_ERC12864_ALT_F_4W_SW_SPI u8g2(U8G2_R0, /* clock=*/ 10, /* data=*/ 7, /* cs=*/ U8X8_PIN_NONE, /* dc=*/ 8, /* reset=*/ 5);
 
 // How many internal neopixels do we have? some boards have more than one!
 #define NUMPIXELS        1

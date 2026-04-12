@@ -18,11 +18,12 @@
 // Pin mapping for QT Py ESP32-C3:
 //   clock = GPIO 10 (SCK)
 //   data  = GPIO 7  (MO)
-//   cs    = GPIO 6  (SCL, repurposed)
+//   cs    = /CS tied to GND on breakout (display always selected)
 //   dc    = GPIO 8  (MI, repurposed as A0/DC)
 //   reset = GPIO 5  (SDA, repurposed)
+// If sharing the SPI bus with other devices, connect /CS to a GPIO and replace U8X8_PIN_NONE.
 U8G2_ST7565_ERC12864_ALT_F_4W_SW_SPI u8g2(U8G2_R0,
-    /* clock=*/ 10, /* data=*/ 7, /* cs=*/ 6, /* dc=*/ 8, /* reset=*/ 5);
+    /* clock=*/ 10, /* data=*/ 7, /* cs=*/ U8X8_PIN_NONE, /* dc=*/ 8, /* reset=*/ 5);
 
 // --- Contrast (from tutorial: default EV level = 24) ---
 uint8_t contrast = 24;

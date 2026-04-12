@@ -175,7 +175,7 @@ Install U8g2 via the Arduino IDE Library Manager.
 | SDA (data) | 2 | MO | 7 |
 | A0 (DC) | 3 | MI* | 8 |
 | /RST | 4 | SDA* | 5 |
-| /CS | 5 | SCL* | 6 |
+| /CS | 5 | tied to GND | - |
 | LED | 6 | A3 | - |
 | GND | 1 | GND | - |
 | VDD | 2 | 3V3 | - |
@@ -201,14 +201,16 @@ All sketches use the same U8g2 constructor. Identifies the display module by par
 
 ```cpp
 U8G2_ST7565_ERC12864_ALT_F_4W_SW_SPI u8g2(U8G2_R0,
-    /* clock=*/ 10, /* data=*/ 7, /* cs=*/ 6, /* dc=*/ 8, /* reset=*/ 5);
+    /* clock=*/ 10, /* data=*/ 7, /* cs=*/ U8X8_PIN_NONE, /* dc=*/ 8, /* reset=*/ 5);
 ```
 
 - `ERC12864_ALT` - contrast-improved variant for this display
 - `_F_` - full framebuffer mode (~1KB RAM)
 - `4W_SW_SPI` - 4-wire software SPI
 
-The 4-wire HW variants of the U8g2 constructors are intended for the platform's native SPI interface: MOSI, MISO, clock and chip select. Since this device is write only the MOSI pin is repurposed for A0 (Data/Command select). Chip select (CS) and Reset are on I2C pins. The 4-wire SW constructor is used to support this pin mapping but others are possible. For example, with only one SPI device, CS could simply be tied low. That and other changes could allow the I2C interface to be used at the same time as SPI.
+The 4-wire HW variants of the U8g2 constructors are intended for the platform's native SPI interface: MOSI, MISO, clock and chip select. Since this device is write only the MISO pin is repurposed for A0 (Data/Command select). The 4-wire SW constructor is used to support this pin mapping but others are possible.
+
+/CS is tied to GND on the breakout board, so the display is always selected and no GPIO is needed for chip select. If sharing the SPI bus with other devices, connect /CS to a GPIO pin and replace `U8X8_PIN_NONE` with that pin number in the constructor.
 
 ---
 
