@@ -67,8 +67,11 @@ The schematic connects the ERC12864FSF-11 display to an 8-pin SPI header (J1) wi
 | C2 | 100nF | VDD bypass capacitor |
 | C3 | 1uF | Charge pump capacitor (V0 to XV0) |
 | C4 | 1uF | Charge pump capacitor (V0 to GND) |
+| U1 | APX805S | Power-on reset IC for display /RST line |
 
 The ST7567's built-in voltage booster generates the LCD bias voltage using external capacitors C3, and C4. No regulator or level shifting is included; the board is 3.3V only. Capacitors C1 and C2 are for decoupling. The R1 value was taken from the reference design, but for 10-20 mA LED current it should be about 200 Ohms.
+
+The APX805S monitors VDD and holds the display /RST line low until power is stable, providing a clean power-on reset without requiring a GPIO pin from the host microcontroller. The /RST header pin (pin 4) is still available for external reset if needed.
 
 ![Breakout board schematic](images/Clipboard03.png)
 
@@ -92,7 +95,10 @@ PCB Back
 Gerber files: V0.2 in `Gerbers20260323/`.
 
 - **V1.0** (April 2026) - Fixed A/K pads and connected LED control to pin 6. See `AssemblyNotes.txt`.
-Gerber files: V0.2 in `Gerbers20260403/`.
+Gerber files: V1.0 in `Gerbers20260403/`.
+
+- **V1.1** (April 2026) - Added APX805S power-on reset IC for display /RST line. External reset connection via header pin 4 remains optional.
+Gerbers sent to DigiKey RedBoard fab 2026-04-15.
 
 
 ---
@@ -174,13 +180,13 @@ Install U8g2 via the Arduino IDE Library Manager.
 | SCL (clock) | 1 | SCK | 10 |
 | SDA (data) | 2 | MO | 7 |
 | A0 (DC) | 3 | MI* | 8 |
-| /RST | 4 | SDA* | 5 |
+| /RST | 4 | APX805S on breakout | - |
 | /CS | 5 | tied to GND | - |
 | LED | 6 | A3 | - |
 | GND | 1 | GND | - |
 | VDD | 2 | 3V3 | - |
 
-*These I2C/SPI pins are repurposed as GPIO since the XIAO style boards have limited pins. The ERC12864 does not provide data out, so the MISO pin is used for Data/Control instead.
+*The MISO pin is repurposed as GPIO since the ERC12864 does not provide data out.
 
 ### Sketches
 
@@ -201,7 +207,7 @@ All sketches use the same U8g2 constructor. Identifies the display module by par
 
 ```cpp
 U8G2_ST7565_ERC12864_ALT_F_4W_SW_SPI u8g2(U8G2_R0,
-    /* clock=*/ 10, /* data=*/ 7, /* cs=*/ U8X8_PIN_NONE, /* dc=*/ 8, /* reset=*/ 5);
+    /* clock=*/ 10, /* data=*/ 7, /* cs=*/ U8X8_PIN_NONE, /* dc=*/ 8, /* reset=*/ U8X8_PIN_NONE);
 ```
 
 - `ERC12864_ALT` - contrast-improved variant for this display
@@ -211,6 +217,8 @@ U8G2_ST7565_ERC12864_ALT_F_4W_SW_SPI u8g2(U8G2_R0,
 The 4-wire HW variants of the U8g2 constructors are intended for the platform's native SPI interface: MOSI, MISO, clock and chip select. Since this device is write only the MISO pin is repurposed for A0 (Data/Command select). The 4-wire SW constructor is used to support this pin mapping but others are possible.
 
 /CS is tied to GND on the breakout board, so the display is always selected and no GPIO is needed for chip select. If sharing the SPI bus with other devices, connect /CS to a GPIO pin and replace `U8X8_PIN_NONE` with that pin number in the constructor.
+
+/RST is managed by the on-board APX805S power-on reset IC, so no GPIO is needed for reset. If external reset control is required, connect the /RST header pin to a GPIO and replace the reset `U8X8_PIN_NONE` with that pin number.
 
 ---
 
