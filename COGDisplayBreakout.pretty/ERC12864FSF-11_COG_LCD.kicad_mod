@@ -115,7 +115,7 @@
 	)
 	(fp_rect
 		(start -4.25 -3.55)
-		(end 4.25 11.95)
+		(end 4.25 10.75)
 		(stroke
 			(width 0.05)
 			(type solid)
@@ -287,6 +287,46 @@
 		(layer "F.Fab")
 		(uuid "a0000013-0000-0000-0000-000000000013")
 	)
+	(fp_line
+		(start -4.3 12.3)
+		(end -4.3 13.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "User.1")
+		(uuid "d58fd38c-0e45-4cc7-8ad2-02603d4fc9c5")
+	)
+	(fp_line
+		(start -4.3 12.3)
+		(end 4.3 12.3)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "User.1")
+		(uuid "4f438605-fc12-46cc-84b6-9de72761ab9a")
+	)
+	(fp_line
+		(start -4.3 13.5)
+		(end 4.3 13.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "User.1")
+		(uuid "d2fa6750-ba14-4794-9dd7-0bddec0787c7")
+	)
+	(fp_line
+		(start 4.3 12.3)
+		(end 4.3 13.5)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "User.1")
+		(uuid "bf6d3b03-d93a-4889-b898-20fea7d37514")
+	)
 	(fp_text user "FFC"
 		(at 0 5 0)
 		(layer "B.SilkS")
@@ -310,19 +350,25 @@
 			)
 		)
 	)
+	(fp_text user "Slot for FFC"
+		(at -3.6 13.4 0)
+		(unlocked yes)
+		(layer "User.1")
+		(uuid "852e9c7c-749c-4f2e-af09-1e82a19fd213")
+		(effects
+			(font
+				(size 0.8 0.8)
+				(thickness 0.15)
+			)
+			(justify left bottom)
+		)
+	)
 	(pad "" np_thru_hole circle
 		(at -12.6 -9.7)
 		(size 2.1 2.1)
 		(drill 2.1)
 		(layers "*.Cu" "*.Mask")
 		(uuid "a0000201-0000-0000-0000-000000000001")
-	)
-	(pad "" np_thru_hole oval
-		(at 0 12.95)
-		(size 8.5 1.2)
-		(drill oval 8.5 1.2)
-		(layers "*.Cu" "*.Mask")
-		(uuid "a0000401-0000-0000-0000-000000000001")
 	)
 	(pad "" np_thru_hole circle
 		(at 12.6 -9.7)
