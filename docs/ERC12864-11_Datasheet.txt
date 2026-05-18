@@ -1,0 +1,835 @@
+EastRising               Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+      ERC12864-11 Series
+
+    Graphic Display Module Datasheet
+
+                          ISO9001
+
+                                                               Registered Company
+
+            sira
+
+                                              CERTIFICATION
+
+                                                                   011
+
+B3
+
+    EastRising Technology Co., Limited
+
+Attention:
+
+A. Some specifications of IC are not listed in this datasheet. Please refer to the IC datasheet for more details.
+B. The related documents for interfacing, demo code, IC datasheet are all available, please download from our web.
+C. Please pay more attention to "INSPECTION CRITERIA" in this datasheet. We assume you already agree with these criterions
+
+    when you place an order with us. No more recommendations.
+
+  REV                         Description                             Release Date
+1.0                      Preliminary Release                          Jul-07-2023
+
+URL: www.buydisplay.com  Document Name: ERC12864-11_Series Datasheet  Page: 1 of 21
+EastRising               Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com                  CONTENTS
+
+1. ORDER INFORMATION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 04
+
+       1.1 Order Number - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 04
+       1.2 Image - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 04
+
+2. SPECIFICATION - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 05
+
+       2.1 Display Specification - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 05
+      2.2 Mechanical Specification - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 05
+       2.3 Electrical Specification - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 05
+       2.4 Optical Specification - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 05
+
+3. OUTLINE DRAWING - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 06
+
+      3.1 Outline Drawing - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 06
+
+4. ELECTRICAL SPEC - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 07
+
+       4.1 Pin Configuration - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 07
+       4.2 Absolute Maximum Ratings- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 08
+       4.3 Electrical Characteristics - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 08
+
+5. INSPECTION CRITERIA - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 09
+
+       5.1 Acceptable Quality Level - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 09
+       5.2 Definition of Lot - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 09
+       5.3 Condition of Cosmetic Inspection - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 09
+       5.4 Module Cosmetic Criteria - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 10
+       5.5 Screen Cosmetic Criteria (Non-Operating) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 12
+       5.6 Screen Cosmetic Criteria (Operating) - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 13
+
+6. PRECAUTIONS FOR USING - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 15
+
+       6.1 Handling Precautions - - - - - - - - -- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 15
+       6.2 Power Supply Precautions- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 15
+       6.3 Operating Precautions- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 16
+       6.4 Mechanical/Environmental Precautions - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 16
+       6.5 Storage Precautions - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 16
+       6.6 Others- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 16
+
+URL: www.buydisplay.com  Document Name: ERC12864-11_Series Datasheet  Page: 2 of 21
+EastRising               Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+7.USING OLED MODULES - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 17
+
+      7.1 Liquid Crystal Display Modules - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 17
+      7.2 Installing OLED Modules - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 17
+      7.3 Precaution for Handling OLED Modules - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 17
+      7.4 Electro-Static Discharge Control- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 18
+      7.5 Precaution for Soldering to EastRising LCM- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 18
+      7.6 Precaution for Operation - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 18
+      7.7 Limited Warranty - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 19
+      7.8 Return Policy - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 19
+
+8. IMAGE STICKING - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 20
+
+      8.1 What is Image Sticking? - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 20
+      8.2 What causes Image Sticking? - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 20
+      8.3 How to Avoid Image Sticking? - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 21
+      8.4 How to Fix the Image Sticking? - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 21
+      8.5 Is Image Sticking Covered by EastRising RMA Warranty- - - - - - - - - - - - - - - - - - - - - - - - - -- - - - - - - - - - - - 21
+
+URL: www.buydisplay.com  Document Name: ERC12864-11_Series Datasheet  Page: 3 of 21
+EastRising               Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+1. ORDERING INFORMATION
+
+1.1 Order Number
+
+No. Part Number          LCD Type           Backlight Color  Graphic & Font Color  Background Color
+1 ERC12864SBSF-11        STN Negative Blue  White Color      White Color           Blue Color
+2 ERC12864FSF-11         FSTN Positive      White Color      Black Color           White Color
+3 ERC12864DNSF-11        FFSTN Negative     White Color      White Color           Black Color
+
+URL: www.buydisplay.com  Document Name: ERC12864-11_Series Datasheet               Page: 4 of 21
+EastRising                    Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+2. SPECIFICATION
+
+2.1 Display Specification     Standard Value                               Unit
+                              128x64                                       Dots
+ Item                         FPC                                          --
+ Display Format               FPC-Soldering                                --
+ Display Connector            -20 ~ +70                                    
+ FPC Connector                -30 ~ +80                                    
+ Operating Temperature        No                                           --
+ Storage Temperature
+ Sunlight Readable            Standard Value                               Unit
+                              27.30(W)x21.50(H)x3.3(T)                     mm
+2.2 Mechanical Specification  23.40(W)x14.00(H)                            mm
+                              21.74(W)x11.50(H)                            mm
+ Item                         0.15x0.16                                    mm
+ Outline Dimension            0.17x0.18                                    mm
+ Visual Area
+ Active Area                  Standard Value                               Unit
+ Dot Size                     COG                                          --
+ Dot Pitch                    ST7567                                       --
+                              4-Wire SPI                                   --
+2.3 Electrical Specification
+                              Standard Value                               Unit
+ Item                         Refer to ERC12864-11 Series Table            --
+ IC Package                   Refer to ERC12864-11 Series Table            --
+ Controller                   6:00                                         Clock
+ Interface                    1/64                                         Duty
+                              1/9                                          Bias
+2.4 Optical Specification
+
+ Item
+ LCD Type
+ Backlight Color
+ Viewing Direction
+ LCD Duty
+ LCD Bias
+
+URL: www.buydisplay.com       Document Name: ERC12864-11_Series Datasheet  Page: 5 of 21
+URL: www.buydisplay.com                                                                                                                                                      REV.             DESCRIPTION OF MODIFY  MODIFY BY         DATE     3.1 Outline Drawing  3. OUTLINE DRAWING   EastRising
+                                                                                                                                                                             1.0                      1'ST DESIGN          JIM     Jul-06-2023
+                                                                                                                                                                                                                                                                                         buydisplay.com
+                                                                                         27,30 O/D
+                                                                                         25,40(LCD)                                 3,30                   1,05
+                                                                                         23,40(V/A)                                 3,20           1,30
+                                                                                         21,74(A/A)
+                                                                                                                                               3,30
+                                                       14,00(V/A)                                                                                                                                                                                                                        Graphic Display Module Datasheet ERC12864-11
+                                                  19,80(LCD)                                                                  1,90
+                                             21,50 O/D
+Document Name: ERC12864-11_Series Datasheet                                                                                              1,20
+                                                                                                                                    0,60
+
+                                             11,50(A.A)            9,75                                                 4,50  2,50                                                            0.17
+                                                                        0,30                         0.6*(12-1)=6,60                                                                          0.15
+
+                                                                                                           19,15                                                       0.16
+                                                                                                                                                                  0.18
+
+                                                                                         7,80        2,00                                                         DOTS DETAIL(10:1)
+
+                                                                K                        14,90                    A                 EastRising                     
+
+                                                                                   6,20                                1,40           buydisplay.com             EASTRISING TECHNOLOGY CO.,LTD
+
+                                             1.Unit: mm                                                                             Web: www.buydisplay.com                                         Email: sales@buydisplay.com
+                                             2.OD=Outline Dimension
+                                             3.VA=Visual Area                                                                       APPROVALS               DATE    MODEL NUMBER :                                   GENERAL TOL.  UNITS
+                                             4.AA=Active Area                                                                                         Jul-06-23        ERC12864-11                                                   MM
+                                                                                                                                    APP                                                                              SCALE:
+Page: 6 of 21                                                                                                                       CHK                           DO NOT SCALE THIS DRAWING.  PROJECTION              N.T.S.
+                                                                                                                                    DWN JIM
+                                                                                                                                                                                                                     SHEET: 1
+EastRising               Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+4. ELECTRICAL SPEC
+
+4.1 Pin Configuration
+
+Pin No  Pin Name       Description
+1       /CS
+                       Chip select input pin. Interface access is enabled when CSB is "L".
+2       /RST           Hardware reset input pin. When RSTB is "L", internal initialization is executed
+                       and the internal registers will be initialized.
+3       A0             It determines whether the access is related to data or command.
+                       A0="H" : Indicates that signals on D[7:0] are display data.
+4       SCL            A0="L" : Indicates that signals on D[7:0] are command.
+5       SDA            Serial clock input.
+6       VDD            Serial data input.
+7       VSS            Power Supply.
+8       V0             Ground
+9       XV0            V0 is the LCD driving voltage for common circuits at negative frame.
+10      NC             XV0 is the LCD driving voltage for common circuits at positive frame.
+11      NC             Do NOT use.
+12      VG             Do NOT use.
+                       VG is the LCD driving voltage for segment circuits.
+
+URL: www.buydisplay.com  Document Name: ERC12864-11_Series Datasheet  Page: 7 of 21
+EastRising                      Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+4.2 Absolute Maximum Ratings
+
+Item                            Symbol     Min.            Max.         Unit          Note
+Power Supply for Logic          VDD        -0.3            3.6          V             Vss=0V
+
+Power Supply for LCD            V0-XV0     -0.3            16           V             Vss=0V
+Input Voltage                   VIN        0.3             -            VDD+0.3       V
+Supply Current for Backlight    ILED       -               -            25            mA
+
+4.3 Electrical Characteristics
+
+ITEM                            SYMBOL     CONDITION       MIN.     TYP.     MAX.     UNIT
+Power Supply for LCM            VDD-VSS                 -  2.8      3.3      3.6           V
+                                VIL                        VSS      --       0.3VDD        V
+Input Voltage                   VIH        L Level         0.7 VDD  --       VDD           V
+                                VOL        H Level         VSS      --       0.2 VDD       V
+Output Voltage                  VOH        L Level         0.8 VDD  --       VDD           V
+Supply Current for LCD          IDD        H Level                           450          uA
+BacklightWhite                  LEDA-LEDK  VDD=3.0V           -        -     3.2           V
+Supply Current for                         -               2.9      3.0
+Backlight                       ILED                                         20          mA
+                                           -                     -  15
+
+URL: www.buydisplay.com         Document Name: ERC12864-11_Series Datasheet           Page: 8 of 21
+EastRising                    Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+5. INSPECTION CRITERIA
+
+5.1 Acceptable Quality Level
+
+Each lot should satisfy the quality level defined as follows
+
+Partition  AQL                Definition
+
+A. Major   0.4%               Functional defective as product
+
+B. Minor   1.5%               Satisfy all functions as product but not satisfy cosmetic standard
+
+5.2 Definition of Lot
+
+One lot means the delivery quantity to customer at one time.
+
+5.3 Condition of Cosmetic Inspection
+
+ INSPECTION AND TEST
+-FUNCTION TEST
+-APPEARANCE INSPECTION
+-PACKING SPECIFICTION
+
+ INSPECTION CONDITION
+- Put under the lamp (20W) at a distance 100mm from
+- Tilt upright 45 degree by the front (back) to inspect OLED appearance.
+
+ AQL INSPECTION LEVEL
+- SAMPLING METHOD: MIL-STD-105D
+- SAMPLING PLAN: SINGLE
+- MAJOR DEFECT: 0.4% (MAJOR)
+- MINOR DEFECT: 1.5% (MINOR)
+- GENERAL LEVEL: II/NORMAL
+
+URL: www.buydisplay.com       Document Name: ERC12864-11_Series Datasheet                         Page: 9 of 21
+EastRising                    Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+5.4 Module Cosmetic Criteria
+
+No.      Item                                       Judgment Criterion                   Partition
+                                                                                           Major
+1 Difference in Spec.         None allowed                                                 Major
+                                                                                           Major
+2 Pattern Peeling             No substrate pattern peeling and floating                    Major
+                                                                                           Minor
+3 Soldering Defects           No soldering missing                                         Minor
+                                                                                           Minor
+                              No soldering bridge
+                                                                                           Minor
+                              No cold soldering                                            Minor
+                                                                                           Minor
+4 Resist Flaw on Substrate Invisible copper foil(0.5mm or more)on substrate pattern
+
+5 Accretion of Metallic       No soldering dust
+
+     Foreign Matter           No accretion of metallic foreign matters(Not exceed0.2mm)
+
+6 Stain                       No stain to spoil cosmetic badly
+
+7 Plate Discoloring           No plate fading, rusting and discoloring
+
+     Solder Amount
+
+     1.Lead Parts
+
+                              a. Soldering side of PCB
+                              Solder to form a'Filet'all around the lead.
+                              Solder should not hide the lead form perfectly.(too much)
+
+                              b.Components side
+                               (In case of `Through Hole PCB')
+                              Solder to reach the Components
+                               side of PCB
+
+8                             Either`toe'(A) or `heal' (B) of                            Minor
+       2.Flat Packages        the lead to be covered by Filet'.                          Minor
+       3.Chips
+                                                                        A     B
+
+                              Lead form to be assume over
+                              solder.
+
+                              (3/2) Hh(1/2)H
+
+                                                                           h  H
+
+URL: www.buydisplay.com       Document Name: ERC12864-11_Series Datasheet                Page: 10 of 21
+EastRising               Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com          1.Light fails or flickers.(Major)                                        See
+    9 Backlight Defects  2. Color and luminance do not correspond to specifications.               list
+                                                                                                  
+   10 PCB Defects           (Major)
+                         3.Exceeds standards for display's blemishes, foreign matter,             See
+   11 Soldering Defects                                                                            list
+                            dark lines or scratches.(Minor)                                        
+
+                            Oxidation or contamination on connectors.*                        Minor
+                         2. Wrong parts, missing parts, or parts not in specification.*
+                         3.Jumpers set incorrectly.(Minor)
+                         4.Solder(if any)on bezel, LED pad, zebra pad, or screw hole
+
+                            pad is not smooth.(Minor)
+                          *Minor if display functions correctly. Major if the display fails.
+
+                         1. Unmelted solder paste.
+                         2. Cold solder joints, missing solder connections, or oxidation.*
+                         3. Solder bridges causing short circuits.*
+                         4. Residue or solder balls.
+                         5. Solder flux is black or brown.
+                          *Minor if display functions correctly. Major if the display fails.
+
+URL: www.buydisplay.com  Document Name: ERC12864-11_Series Datasheet                          Page: 11 of 21
+EastRising               Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+5.5 Screen Cosmetic Criteria (Non-Operating)
+
+No. Defect               Judgment Criterion                                                              Partition
+                         In accordance with Screen Cosmetic Criteria (Operating) No.1.                   Minor
+1  Spots                 In accordance with Screen Cosmetic Criteria (Operation) No.2.                   Minor
+                                                                                                         Minor
+2  Lines
+
+3  Bubbles in Polarizer
+
+                          Size: d mm          Acceptable Qty in active area
+                               d0.3                    Disregard
+                                                             3
+                         0.3<d1.0                            1
+                         1.0<d1.5                            0
+                         1.5<d
+
+4  Scratch               In accordance with spots and lines operating cosmetic criteria, When the light  Minor
+                         reflects on the panel surface, the scratches are not to be remarkable.
+5  Allowable density     Above defects should be separated more than 30mm each other.                    Minor
+                         Not to be noticeable coloration in the viewing area of the OLED panels.         Minor
+6  Coloration            Back-lit type should be judged with back-lit on state only.
+                         Not to be noticeable.                                                           Minor
+7  Contamination
+
+URL: www.buydisplay.com  Document Name: ERC12864-11_Series Datasheet                    Page: 12 of 21
+EastRising               Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+5.6 Screen Cosmetic Criteria (Operating)
+
+No.      Defect                                                       Judgment Criterion                            Partition
+                                                                                                                  Minor
+1 Spots                  A) Clear
+                                                                                                                  Minor
+                                   Size:d mm                               Acceptable Qty in active area
+                                            d0.1                                         Disregard
+                                                                                               6
+                                   0.1<d0.2                                                    2
+                                   0.2<d0.3                                                    0
+
+                                        0.3<d
+
+                         Note: Including pin holes and defective dots which must be within one pixel
+                         Size.
+                         Unclear
+
+                                   Size:d mm                               Acceptable Qty in active area
+                                              d0.2                                       Disregard
+                                                                                               6
+                                     0.2<d0.5                                                  2
+                                     0.5<d0.7                                                  0
+
+                                          0.7<d
+
+2 Lines                  A) Clear
+
+                         L 5.0     8                     (0)
+                            2.0           (6)
+                                                                                               See No.1
+                                          0.02 0.05                   0.1                                W
+
+                         Note: () ­ Acceptable Qty in active area                                   See No.1
+                             L - Length (mm)                                                                   W
+                             W -Width(mm)
+                             -Disregard                                                   0.5
+
+                         B) Unclear
+
+                         L 10.0    8                                               (0)
+                                                                 (6)  0.3
+
+                               2.0
+                                              0.05
+
+Clear' = The shade and size are not changed by Vo.
+Unclear'= The shade and size are changed by Vo.
+
+URL: www.buydisplay.com            Document Name: ERC12864-11_Series Datasheet                                    Page: 13 of 21
+EastRising                Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+No.    Defect             Judgment Criterion                                                    Partition
+    3  Rubbing line       Not to be noticeable.                                                 Minor
+    4  Allowable density  Above defects should be separated more than 10mm each other.          Minor
+    5  Rainbow            Not to be noticeable.                                                 Minor
+    6  Dot size           To be 95%~105%of the dot size (Typ.) in drawing.                      Minor
+                          Partial defects of each dot (ex.pin-hole) should be treated as spot.
+    7  Brightness         (see Screen Cosmetic Criteria (Operating) No.1)                       Minor
+       (only back-lit
+       Module)            Brightness Uniformity must be BMAX/BMIN2
+                          - BMAX : Max.value by measure in 5 points
+                          - BMIN : Min.value by measure in 5 points
+                          Divide active area into 4 vertically and horizontally.
+                          Measure 5 points shown in the following figure.
+
+8      Contrast           Contrast Uniformity must be BmAX/BMIN2                                Minor
+                          Measure 5 points shown in the following figure.
+       Uniformity         Dashed lines divide active area into 4 vertically and horizontally.
+                          Measuring points are located at the inter-sections of dashed line.
+
+                                              Note: BMAX ­ Max.value by measure in 5 points.
+                                                      BMIN ­ Min.value by measure in 5 points.
+                                                      O ­ Measuring points in 10mm.
+
+Note:
+(1) Size: d=(long length + short length)/2
+(2) The limit samples for each item have priority.
+(3) Complexed defects are defined item by item, but if the number of defects is defined in above table, the total number should
+not exceed 10.
+
+URL: www.buydisplay.com   Document Name: ERC12864-11_Series Datasheet                           Page: 14 of 21
+EastRising               Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+(4) In case of `concentration', even the spots or the lines of `disregarded' size should not be allowed. Following three
+situations should be treated as `concentration'.
+
+               -7 or over defects in circle of 5mm.
+               -10 or over defects in circle of 10mm
+               -20 or over defects in circle of 20mm
+
+6. PRECAUTIONS FOR USING
+
+6.1 Handling Precautions
+
+ This device is susceptible to Electro-Static Discharge (ESD) damage. Observe Anti-Static precautions.
+ EastRising display panel is made of glass. Do not subject it to a mechanical shock by dropping it or impact.
+ If EastRising display panel is damaged and the liquid crystal substance leaks out, be sure not to get any in your mouth. If the
+
+   substance contacts your skin or clothes, wash it off using soap and water.
+ Do not apply excessive force to the EastRising display surface or the adjoining areas since this may cause the color tone to
+
+  vary.
+ The polarizer covering the EastRising display surface of the OLED module is soft and easily scratched. Handle this polarizer
+
+  carefully.
+ If EastRising display surface becomes contaminated, breathe on the surface and gently wipe it with a soft dry cloth. If it is
+
+  heavily contaminated, moisten cloth with one of the following Isopropyl or alcohol.
+ Solvents other than those above-mentioned may damage the polarizer. Especially, do not use the Water.
+ Exercise care to minimize corrosion of the electrode. Corrosion of the electrodes is accelerated by water droplets, moisture
+
+  condensation or a current flow in a high-humidity environment.
+ Install the EastRising OLED Module by using the mounting holes. When mounting the OLED module make sure it is free of
+
+  twisting, warping and distortion. In particular, do not forcibly pull or bend the cable or the backlight cable.
+ Do not attempt to disassemble or process EastRising OLED module.
+ NC terminal should be open. Do not connect anything.
+ If the logic circuit power is off, do not apply the input signals.
+ To prevent destruction of the elements by static electricity, be careful to maintain an optimum work environment.
+
+  -Be sure to ground the body when handling EastRising OLED modules.
+  -Tools required for assembling, such as soldering irons, must be properly grounded.
+-To reduce the amount of static electricity generated, do not conduct assembling and other work under dry conditions.
+-The OLED module is coated with a film to protect the display surface. Exercise care when peeling off this protective film since
+static electricity may be generated.
+
+6.2 Power Supply Precautions
+
+ Identify and, at all times, observe absolute maximum ratings for both logic and LC drivers. Note that there is some variance
+
+3B6895241
+
+   between models.
+ Prevent the application of reverse polarity to VDD and VSS, however briefly.
+ Use a clean power source free from transients. Power-up conditions are occasionally jolting and may exceed the maximum
+
+   ratings of EastRising modules.
+ The VDD power of EastRising module should also supply the power to all devices that may access the display. Don't allow
+
+   the data bus to be driven when the logic supply to the module is turned off.
+
+URL: www.buydisplay.com  Document Name: ERC12864-11_Series Datasheet  Page: 15 of 21
+EastRising                  Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+6.3 Operating Precautions
+
+ DO NOT plug or unplug EastRising module when the system is powered up.
+
+453B92
+
+ Minimize the cable length between EastRising module and host MPU.
+ For models with backlights, do not disable the backlight by interrupting the HV line. Unload inverters produce voltage
+
+  extremes that may arc within a cable or at the display.
+ Operate EastRising module within the limits of the modules temperature specifications.
+
+6.4 Mechanical/Environmental Precautions
+
+ Improper soldering is the major cause of module difficulty. Use of flux cleaner is not recommended as they may seep under
+
+B47305
+
+   the electrometric connection and cause display failure.
+ Mount EastRising module so that it is free from torque and mechanical stress.
+ Surface of the OLED panel should not be touched or scratched. The display front surface is an easily scratched, plastic
+
+    polarizer. Avoid contact and clean only when necessary with soft, absorbent cotton dampened with petroleum benzene.
+ Always employ anti-static procedure while handling EastRising module.
+ Prevent moisture build-up upon the module and observe the environmental constraints for storage tem
+ Do not store in direct sunlight
+ If leakage of the liquid crystal material should occur, avoid contact with this material, particularly ingestion. If the body or
+
+   clothing becomes contaminated by the liquid crystal material, wash thoroughly with water and soap.
+
+6.5 Storage Precautions
+
+  When storing the OLED modules, avoid exposure to direct sunlight or to the light of fluorescent lamps.
+   Keep EastRising modules in bags (avoid high temperature / high humidity and low temperatures below 0 ºC.
+Whenever possible, EastRising OLED modules should be stored in the same conditions in which they were shipped from our
+company.
+
+6.6 Others
+
+Liquid crystals solidify under low temperature (below the storage temperature range) leading to defective orientation or the
+
+36B057
+
+generation of air bubbles (black or white). Air bubbles may also be generated if the module is subject to a low temperature.
+If EastRising OLED modules have been operating for a long time showing the same display patterns, the display patterns may
+remain on the screen as ghost images and a slight contrast irregularity may also appear. A normal operating status can be
+regained by suspending use for some time. It should be noted that this phenomenon does not adversely affect performance
+reliability.
+To minimize the performance degradation of the OLED modules resulting from destruction caused by static electricity etc.,
+exercise care to avoid holding the following sections when handling the modules.
+-Exposed area of the printed circuit board.
+
+-Terminal electrode sections.
+
+64B8395 623B                Document Name: ERC12864-11_Series Datasheet  Page: 16 of 21
+
+   URL: www.buydisplay.com
+EastRising               Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+7. USING OLED MODULES
+
+7.1 Liquid Crystal Display Modules
+
+EastRising OLED is composed of glass and polarizer. Pay attention to the following items when handling.
+ Please keep the temperature within specified range for use and storage. Polarization degradation, bubble generation or
+
+   polarizer peel-off may occur with high temperature and high humidity.
+ Do not touch, push or rub the exposed polarizers with anything harder than an HB pencil lead (glass, tweezers, etc.).
+ N-hexane is recommended for cleaning the adhesives used to attach front/rear polarizers and reflectors made of organic
+
+   substances which will be damaged by chemicals such as acetone, toluene, ethanol and isopropyl alcohol.
+ When EastRising display surface becomes dusty, wipe gently with absorbent cotton or other soft material like chamois
+
+   soaked in petroleum benzin. Do not scrub hard to avoid damaging the display surface.
+ Wipe off saliva or water drops immediately, contact with water over a long period of time may cause deformation or color
+
+   fading.
+ Avoid contacting oil and fats.
+ Condensation on the surface and contact with terminals due to cold will damage, stain or dirty the polarizers. After products
+
+   are tested at low temperature they must be warmed up in a container before coming is contacting with room temperature
+   air.
+ Do not put or attach anything on EastRising display area to avoid leaving marks on.
+ Do not touch the display with bare hands. This will stain the display area and degradate insulation between terminals (some
+   cosmetics are determinated to the polarizers).
+ As glass is fragile. It tends to become or chipped during handling especially on the edges. Please avoid dropping.
+
+7.2 Installing OLED Modules
+
+ Cover the surface with a transparent protective plate to protect the polarizer and LC cell.
+
+B93841725
+
+ When assembling the LCM into other equipment, the spacer to the bit between the LCM and the fitting
+plate should have enough height to avoid causing stress to the module surface, refer to the individual specifications for
+measurements. The measurement tolerance should be±0.1mm.
+
+7.3 Precaution for Handling OLED Modules
+
+Since EastRising LCM has been assembled and adjusted with a high degree of precision; avoid applying excessive shocks to the
+module or making any alterations or modifications to it.
+ Do not alter, modify or change the shape of the tab on the metal frame.
+ Do not make extra holes on the printed circuit board, modify its shape or change the positions of components to be
+
+   attached.
+ Do not damage or modify the pattern writing on the printed circuit board.
+ Absolutely do not modify the zebra rubber strip (conductive rubber) or heat seal connector.
+ Except for soldering the interface, do not make any alterations or modifications with a soldering iron.
+ Do not drop, bend or twist EastRising LCM.
+
+URL: www.buydisplay.com  Document Name: ERC12864-11_Series Datasheet  Page: 17 of 21
+EastRising               Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+7.4 Electro-Static Discharge Control
+
+Since this module uses a CMOS LSI, the same careful attention should be paid to electrostatic discharge as for an ordinary
+CMOS IC.
+ Make certain that you are grounded when handing LCM.
+ Before remove LCM from its packing case or incorporating it into a set, be sure the module and your body have the same
+
+  electric potential.
+ When soldering the terminal of LCM, make certain the AC power source for the soldering iron does not leak.
+ When using an electric screwdriver to attach LCM, the screwdriver should be of ground potentiality to minimize as much as
+
+  possible any transmission of electromagnetic waves produced sparks coming from the commutator of the motor.
+ As far as possible make the electric potential of your work clothes and that of the work bench the ground potential.
+ To reduce the generation of static electricity be careful that the air in the work is not too dried. A relative humidity of 50%-60%
+
+  is recommended.
+
+7.5 Precaution for Soldering to EastRising LCM
+
+ Observe the following when soldering lead wire, connector cable and etc. to the LCM.
+  -Soldering iron temperature : 280±10
+  -Soldering time: 3-4 sec.
+  -Solder: eutectic solder.
+
+If soldering flux is used, be sure to remove any remaining flux after finishing to soldering operation. (This does not apply in the
+case of a non-halogen type of flux.) It is recommended that you protect the OLED surface with a cover during soldering to
+prevent any damage due to flux spatters.
+ When soldering the electroluminescent panel and PC board, the panel and board should not be detached more than three
+
+  times. This maximum number is determined by the temperature and time conditions mentioned above, though there may be
+  some variance depending on the temperature of the soldering iron.
+ When remove the electroluminescent panel from the PC board, be sure the solder has completely melted, the soldered pad
+  on the PCs board could be damaged.
+
+7.6 Precaution for Operation
+
+ Driving the EastRising OLED in the voltage above the limit shortens its life.
+
+B04713
+
+ Response time is greatly delayed at temperature below the operating temperature range. However, this does not mean the
+  OLED will be out of the order. It will recover when it returns to the specified temperature range.
+
+ If EastRising display area is pushed hard during operation, the display will become abnormal. However, it will return to
+  normal if it is turned off and then back on.
+
+ Condensation on terminals can cause an electrochemical reaction disrupting the terminal circuit. Therefore, it must be used
+  under the relative condition of 40, 50% RH.
+
+ When turning the power on, input each signal after the positive/negative voltage becomes stable.
+
+URL: www.buydisplay.com               Document Name: ERC12864-11_Series Datasheet  Page: 18 of 21
+EastRising               Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+7.7 Limited Warranty
+
+Unless agreed between EastRising and customer, EastRising will replace or repair any of its OLED modules which are found to
+
+419B63
+
+be functionally defective when inspected in accordance with EastRising OLED acceptance standards (copies available upon
+request) for a period of one year from date of shipments. Cosmetic/visual defects must be returned to EastRising within 90
+days of shipment. Confirmation of such date shall be based on freight documents. The warranty liability of EastRising limited to
+repair and/or replacement on the terms set forth above. EastRising will not be responsible for any subsequent or consequential
+events.
+
+7.8 Return Policy
+
+No warranty can be granted if the precautions stated above have been disregarded. The typical examples of violations are:
+
+4B1296
+
+-Broken OLED glass.
+-PCB eyelet damaged or modified.
+-PCB conductors damaged.
+-Circuit modified in any way, including addition of components.
+-PCB tampered with by grinding, engraving or painting varnish.
+-Soldering to or modifying the bezel in any manner.
+Module repairs will be invoiced to the customer upon mutual agreement. Modules must be returned with sufficient
+description of the failures or defects. Any connectors or cable installed by the customer must be removed completely
+without damaging the PCB eyelet's, conductors and terminals.
+
+URL: www.buydisplay.com  Document Name: ERC12864-11_Series Datasheet  Page: 19 of 21
+EastRising               Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+8. IMAGE STICKING
+
+8.1 What is Image Sticking?
+
+If you remain a fixed image on OLED Display for a long period of time, you may experience a phenomenon called Image
+Sticking. Image Sticking - sometimes also called "image retention" or "ghosting"- is a phenomenon where a faint outline
+of a previously displayed image remains visible on the screen when the image is changed. It can occur at variable levels of
+intensity depending on the specific image makeup, as well as the amount of time the core image elements are allowed to
+remain unchanged on the screen. In POS applications, for example, a button menu which remains fixed, or in which the
+"frame" elements (core image) remain fixed and the buttons may change, may be susceptible to image sticking. It is
+important to note that if the screen is used exclusively for this application, the user may never notice this phenomenon since
+the screen never displays other content. `It is only when an image other than the "retained" image is shown on the screen
+that this issue becomes evident. Image sticking is different that the "burn-in" effect commonly associated with phosphor
+based devices.
+
+8.2 What causes Image Sticking?
+
+Image sticking is an intrinsic behavior of OLED displays due to the susceptibility to polarization of the interior materials
+(liquid crystals) when used under static, charged conditions (continuously displaying the same image). The individual liquid
+crystals in an OLED panel have unique electrical properties. Displaying a fixed pattern - such as the POS menu described
+above ­ over prolonged periods can cause a parasitic charge build-up (polarization) within the liquid crystals which affects
+the crystals' optical properties and ultimately prevents the liquid crystal from returning to its normal, relaxed state when
+the pattern is finally changed. This effect takes place at a cellular level within the OLED, and the effect can cause charged
+crystal alignment at the bottom or top of a crystal cell in the "z" axis, or even crystal migration to the edges of a cell, again
+based on their polarity. These conditions can cause image sticking over an entire area, or at boundaries of distinct color
+change respectively. In either case, when the liquid crystals in the pixels and sub-pixels utilized to display the static image are
+polarized such that they can not return fully to their "relaxed" state upon deactivation, the result is a faint, visible, retained
+image on the panel upon presentation of a new, different image. The actual rate of image retention depends on variation
+factors such as the specific image, how long it is displayed unchanged, the temperature within the panel and even the
+specific panel brand due to manufacturing differences amongst panel manufacturers.
+
+URL: www.buydisplay.com  Document Name: ERC12864-11_Series Datasheet  Page: 20 of 21
+EastRising               Graphic Display Module Datasheet ERC12864-11
+
+ buydisplay.com
+
+8.3 How to Avoid Image Sticking?
+
+- Try not to operate the OLED with a "fixed" image on the screen for more than 2 hours.
+- If you are operating the monitor in an elevated temperature environment and with a displayed image which is
+contrary to the recommendations in "For Software Developers" below, image stick can occur in as little as 30 minutes.
+Adjust your screen saver settings accordingly.
+- Power down the unit during prolonged periods of inactivity such as the hours a store is closed or a shift during which the
+piece of equipment isn't used.
+- Use a screensaver with a black or medium gray background that is automatically set to come on if the device is inactive for
+more than 5-10 minutes.
+- Avoid placing the monitor in poorly ventilated areas or in areas that will create excess heat around the monitor for software
+developers.
+- In defining the icons, buttons, or windows in the screen, try to utilize block patterns instead of distinct lines as borders for
+dividing the display into distinct areas.
+- If it is necessary to display a static image, try to use colors that are symmetric to the middle grey level at the boundary of
+two different colors, and slightly shift the borders line once in a while.
+- Try to utilize medium gray hues for those areas that will have prolonged display times or remain static as other menu
+elements change.
+
+8.4 How to Fix the Image Sticking?
+
+Unlike the usually irreversible "burn-in" effects commonly associated with direct view phosphor display devices such as
+CRTs, an image retained on an OLED display can be reversed ­ often to a point of total invisibility. However, the severity of the
+underlying causes (as described above) of the image retained on a specific display, as well as the variation factors (see "For
+Software Developers" above) under which the retained image was created, will dictate the final level of retention reversal.
+One way to erase a retained image on a panel is to run the screen (monitor "on") in an "all black" pattern for 4-6 hours.
+It is also helpful to do this in an elevated temperature environment of approximately 35º to 50ºC. Again, utilizing a dynamic
+screen saver with an all black background during prolonged idle display periods is a good way to avoid image retention
+issues.
+
+8.5 Is Image Sticking Covered by EastRising RMA Warranty?
+
+Image sticking is a phenomenon inherent to OLED Display technology itself, and as such, the occurrence of this "ghosting"
+effect is considered normal operation by the manufacturers of the OLED display modules which are integrated into today's
+monitor solutions. EastRising does not warrant any display against the occurrence of image sticking. We strongly advise that
+you follow the operating recommendations listed above to avoid the occurrence of this phenomenon.
+
+                                  That's the end of the datasheet.
+
+URL: www.buydisplay.com           Document Name: ERC12864-11_Series Datasheet  Page: 21 of 21
+

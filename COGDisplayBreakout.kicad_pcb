@@ -544,7 +544,7 @@
 		(property "Reference" "LCD1"
 			(at 0 -9.398 0)
 			(layer "F.SilkS")
-			(uuid "6b9c8ffb-a0d8-4b75-a723-940ad44e7387")
+			(uuid "10ac888e-ce9f-4ede-9a07-bdf7e180f462")
 			(effects
 				(font
 					(size 1 1)
@@ -555,7 +555,7 @@
 		(property "Value" "ERC12864FSF-11"
 			(at 0 -5.4 0)
 			(layer "F.Fab")
-			(uuid "de4ac88e-f33a-4f16-a722-ce9a1c349662")
+			(uuid "4893cc9f-9776-43b1-82bb-323559230f47")
 			(effects
 				(font
 					(size 1 1)
@@ -567,7 +567,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "98fb3bdc-bb6d-460d-b936-d6a1e4496ab7")
+			(uuid "0f44e252-5c92-47bb-8951-a12193fefb44")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -579,7 +579,7 @@
 			(at 0 0 0)
 			(layer "F.Fab")
 			(hide yes)
-			(uuid "886deee5-1a03-4b4b-9e00-5472711dbbc9")
+			(uuid "07d07735-bc1d-439d-9ab7-7d53a131885c")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3611,6 +3611,17 @@
 			)
 		)
 	)
+	(gr_rect
+		(start 134.62 97.79)
+		(end 143.002 100.33)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill yes)
+		(layer "B.SilkS")
+		(uuid "bfaaa536-0794-488d-a559-fbaaba526c16")
+	)
 	(gr_arc
 		(start 162.605 108.335)
 		(mid 161.861051 110.131051)
@@ -3834,12 +3845,24 @@
 		)
 	)
 	(gr_text "12"
-		(at 144.78 90.424 0)
+		(at 146.05 90.678 0)
 		(layer "B.SilkS")
 		(uuid "287eb26a-6d9f-4fa8-89fc-d68233f117db")
 		(effects
 			(font
 				(size 0.8 0.8)
+				(thickness 0.1)
+			)
+			(justify left bottom mirror)
+		)
+	)
+	(gr_text "COG Display\nBreakout\nV.1.2"
+		(at 146.558 88.646 0)
+		(layer "B.SilkS")
+		(uuid "2ce3d5c5-99c4-499d-9043-d46de3807bc9")
+		(effects
+			(font
+				(size 1 1)
 				(thickness 0.1)
 			)
 			(justify left bottom mirror)
@@ -3869,8 +3892,20 @@
 			(justify mirror)
 		)
 	)
+	(gr_text "S/N"
+		(at 143.002 97.028 0)
+		(layer "B.SilkS")
+		(uuid "55b515de-4e01-4292-a8c8-ff109d5d9a14")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.1)
+			)
+			(justify left bottom mirror)
+		)
+	)
 	(gr_text "1"
-		(at 152.4 90.424 0)
+		(at 152.146 90.678 0)
 		(layer "B.SilkS")
 		(uuid "ae3b17d4-a3fd-4e4d-94c1-1290380a3f98")
 		(effects
